@@ -1,0 +1,32 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: var(--primary-color);
+  padding: 0.6rem 0rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+.nav-item {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 0.4rem;
+  cursor: pointer;
+  font-size: 0.7rem; 
+  padding: 0.5rem 1rem;
+  color: var(--text-color);
+  font-family: var(--text-font);
+  transition: background 0.3s ease;
+}
+.nav-item.active {
+  background-color: #5105fd;
+}
+.nav-item.active {
+  background-color: #5105fd;
+}

@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Marhey:wght@300..700&display=swap");
+
+:root {
+  --primary-color: #0c1033;
+  --secondary-color: #5105fd;
+  --main-text: #222222;
+  --text-color: white;
+  --text2-color: #666666;
+  --text-font: "Alexandria", sans-serif;
+}
+
+body {
+  /* height: 100vh; */
+  margin: 0;
+  padding: 0;
+  direction: rtl;
+  /* overflow: hidden; */
+}
+.app-container {
+  /* overflow-x: hidden; */
+  height: 100vh; /*was not here, it was in the body*/
+  display: flex;
+  
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-track {
+  border-radius: 1px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--text2-color); 
+  border-radius: 1px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary-color); 
+}
+.burger-menu {
+  display: none;
+}
+.burger-menu-container {
+  display: none;
+}
+@media only screen and (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+  .burger-menu {
+    display: block;
+    position: relative;
+    z-index: 1000;
+  }
+  .burger-menu-container {
+    display: block;
+    position: relative;
+    z-index: 1000;
+  }
+}

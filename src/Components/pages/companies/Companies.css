@@ -1,0 +1,527 @@
+.text-component-div {
+   width: 82%;/* 84 */
+  /* height: 100vh; */
+  /* min-height: 100vh; */
+  /* margin-right: 17%; */
+  /* margin-right: 1%; */
+  right: 18%;
+  left:0;
+  position: relative;
+  z-index: 1;
+  margin-top: 1.5%;
+  /* margin-right: 16.5%; */
+  /* background-color: blue; */
+  /* position: static; */
+
+}
+.company-text-h2 {
+  width: 100%;
+  /* height: 5.4%; */
+  font-size: 1rem;
+  color: var(--main-text);
+  font-family: var(--text-font);
+  /* background-color: rgb(42, 197, 197); */
+}
+.copmany-text-p {
+  width: 100%;
+  /* height: 4%; */
+  font-size: 0.8rem;
+  color: var(--main-text);
+  font-family: var(--text-font);
+  /* background-color: aquamarine; */
+}
+.secSection {
+  /* background-color: rgb(167, 198, 137); */
+  width: 100%;
+  height: 20%; /*was 10*/
+  gap: 7%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 3.1rem;
+}
+
+.Edit {
+  /* background-color: rgb(58, 169, 143); */
+  width: 98%;
+  /* 
+  width: 80%;
+  height: 100%;
+  font-family: var(--text-font); */
+  /* overflow-y: scroll; */
+}
+@media only screen and (max-width: 500px){
+  .text-component-div {
+    /* background-color: rgb(228, 205, 147); */
+    width: 97%;
+    margin-right: -16%;
+    margin-top: 15%;
+  }
+ .company-text-h2 {
+   font-size: 0.9rem;
+ }
+ .copmany-text-p {
+   font-size: 0.7rem;
+ }
+ .secSection {
+   margin-top: 2.1rem;
+   gap: 1rem;
+ }
+.text-component-div .FAB-button {
+  width: 20%;
+  font-size: 0.7rem;
+}
+.text-component-div .search-cont{
+  width: 75.6%;
+  font-size: 0.8rem;
+ }
+ .text-component-div .text-area-search {
+   width:100%;
+   font-size: 0.7rem;
+ }
+.del-show-cont {
+
+  /* background-color: aqua; */
+}
+.text-component-div .delete-cont {
+  width: 56%;
+}
+.text-component-div .del-select {
+  width: 70%;
+  font-size: 0.7rem;
+}
+.text-component-div .del-select option {
+  font-size: 0.6rem;
+}
+.text-component-div .show-cont {
+  width: 38%;
+}
+.text-component-div .show-select {
+  font-size: 0.7rem;
+}
+.text-component-div .show-select option {
+  width: 100%;
+  height: 100%;
+  font-size: 0.7rem;
+}
+.text-component-div .btn-done {
+  font-size: 0.7rem;
+}
+.text-component-div .Edit{
+  width: 98%;
+  margin-top: 2rem;
+}
+.text-component-div .wholeEditCont{
+  width: 100%;
+}
+
+.text-component-div .checkAndText {
+  gap: 0%;
+}
+.text-component-div .nameAndType {
+  width: 79%;
+}
+.text-component-div .check-edit {
+}
+.text-component-div .comp-name {
+  font-size: 0.7rem;
+  width: 100%;
+}
+.text-component-div .comp-type {
+  font-size: 0.7rem;
+  padding: 0rem;
+}
+.text-component-div .edit-btn2 {
+  padding:0;
+  width: 14%;
+  gap:0;
+}
+.icon-wrapper {
+}
+.text-component-div .button-text {
+font-size:0.9rem;
+}
+.hr-text {
+  /* width:93.4rem; */
+}
+
+}
+@media only screen and (min-width: 500px){
+  .text-component-div {
+    /* background-color: rgb(255, 225, 0); */
+    width: 97%;
+    margin-right: -17%;
+    margin-top: 9%;
+  }
+  .company-text-h2 {
+    font-size: 0.9rem;
+  }
+  .copmany-text-p {
+    font-size: 0.7rem;
+  }
+  .secSection {
+    margin-top: 2.1rem;
+    gap: 1rem;
+  }
+ .text-component-div .FAB-button {
+   width: 20%;
+   font-size: 0.7rem;
+ }
+ .text-component-div .search-cont{
+  width: 75.6%;
+ }
+ .text-component-div .text-area-search {
+   width:100%
+ }
+ .del-show-cont {
+ 
+   /* background-color: aqua; */
+ }
+ .text-component-div .delete-cont {
+   width: 56%;
+ }
+ .text-component-div .del-select {
+   width: 70%;
+   font-size: 0.7rem;
+ }
+ .text-component-div .del-select option {
+   font-size: 0.6rem;
+ }
+ .text-component-div .show-cont {
+   width: 38%;
+ }
+ .text-component-div .show-select {
+   font-size: 0.7rem;
+ }
+ .text-component-div .show-select option {
+   width: 100%;
+   height: 100%;
+   font-size: 0.7rem;
+ }
+ .text-component-div .btn-done {
+   font-size: 0.7rem;
+ }
+
+  .Edit{
+  width: 100%;
+  margin-top: 2rem;
+}
+.text-component-div .wholeEditCont{
+  width: 100%;
+}
+
+.text-component-div .checkAndText {
+  gap: 0%;
+}
+.text-component-div .nameAndType {
+  width: 79%;
+}
+.text-component-div .check-edit {
+}
+.text-component-div .comp-name {
+  font-size: 0.7rem;
+  width: 100%;
+}
+.text-component-div .comp-type {
+  font-size: 0.7rem;
+  padding: 0rem;
+}
+.text-component-div .edit-btn2 {
+  padding:0;
+  width: 14%;
+  gap:0;
+}
+.icon-wrapper {
+}
+.text-component-div .button-text {
+font-size:0.9rem;
+}
+.hr-text {
+  /* width:93.4rem; */
+}
+}
+@media only screen and (min-width: 768px) {
+  .burger-menu-container {
+    display: none;
+  }
+  .sidebar{
+    display:flex;
+  }
+  .text-component-div {
+    width: 78%;
+    margin-right: 3%;
+    margin-top: 0%;
+    /* background-color: rgb(255, 217, 127); */
+  }
+  .company-text-h2 {
+    font-size: 0.9rem;
+  }
+  .copmany-text-p {
+    font-size: 0.7rem;
+  }
+  .secSection {
+    margin-top: 2.1rem;
+    gap: 1rem;
+  }
+ .text-component-div .FAB-button {
+   width: 13%;
+   font-size: 0.7rem;
+ }
+ .text-component-div .search-cont{
+   width: 82.6%;
+   font-size: 0.8rem;
+  }
+  .text-component-div .text-area-search {
+    width:100%;
+    font-size: 0.7rem;
+  }
+ .del-show-cont {
+ 
+   /* background-color: aqua; */
+ }
+ .text-component-div .delete-cont {
+   width: 36%;
+ }
+ .text-component-div .del-select {
+   width: 70%;
+   font-size: 0.7rem;
+ }
+ .text-component-div .del-select option {
+   font-size: 0.8rem;
+ }
+ .text-component-div .show-cont {
+   width: 38%;
+ }
+ .text-component-div .show-select {
+   font-size: 0.7rem;
+ }
+ .text-component-div .show-select option {
+   font-size: 0.8rem;
+ }
+ .text-component-div .btn-done {
+   font-size: 0.7rem;
+ }
+ .text-component-div .Edit{
+   width: 98%;
+   
+ }
+ .text-component-div .wholeEditCont{
+   width: 100%;
+ }
+ 
+ .text-component-div .checkAndText {
+   gap: 0%;
+ }
+ .text-component-div .nameAndType {
+   width: 79%;
+ }
+ .text-component-div .check-edit {
+  width: 5%;
+  background-color: aqua;
+ }
+ .text-component-div .comp-name {
+   font-size: 0.7rem;
+   width: 100%;
+ }
+ .text-component-div .comp-type {
+   font-size: 0.7rem;
+   padding: 0rem;
+ }
+ .text-component-div .edit-btn2 {
+   padding:0;
+   width: 14%;
+   gap:0;
+ }
+ .icon-wrapper {
+ }
+ .text-component-div .button-text {
+ font-size:0.9rem;
+ }
+ .hr-text {
+   /* width:93.4rem; */
+ }
+}
+@media only screen and (min-width: 992px) {
+  .text-component-div {
+    width:78%;
+    margin-right: 3%;
+    /* background-color: rgb(59, 185, 143); */
+  }
+  .company-text-h2 {
+    font-size: 0.9rem;
+  }
+  .copmany-text-p {
+    font-size: 0.7rem;
+  }
+  .secSection {
+    margin-top: 2.1rem;
+  }
+ .text-component-div .FAB-button {
+   width: 10%;
+   font-size: 0.7rem;
+ }
+ .text-component-div .search-cont{
+   width: 85.6%;
+   font-size: 0.8rem;
+  }
+  .text-component-div .text-area-search {
+    width:100%;
+    font-size: 0.7rem;
+  }
+ .del-show-cont {
+ 
+   /* background-color: aqua; */
+ }
+ .text-component-div .delete-cont {
+   width: 36%;
+ }
+ .text-component-div .del-select {
+   width: 70%;
+   font-size: 0.7rem;
+ }
+ .text-component-div .del-select option {
+   font-size: 0.8rem;
+ }
+ .text-component-div .show-cont {
+   width: 38%;
+ }
+ .text-component-div .show-select {
+   font-size: 0.7rem;
+ }
+ .text-component-div .show-select option {
+   font-size: 0.8rem;
+ }
+ .text-component-div .btn-done {
+   font-size: 0.7rem;
+ }
+ .text-component-div .Edit{
+   width: 99%;
+ }
+ .text-component-div .wholeEditCont{
+   width: 100%;
+ }
+ .text-component-div .checkAndText {
+   gap: 0%;
+ }
+ .text-component-div .nameAndType {
+   width: 79%;
+ }
+ .text-component-div .check-edit {
+  width: 4%;
+  background-color: aqua;
+ }
+ .text-component-div .comp-name {
+   font-size: 0.7rem;
+   width: 100%;
+ }
+ .text-component-div .comp-type {
+   font-size: 0.7rem;
+   padding: 0rem;
+ }
+ .text-component-div .edit-btn2 {
+   padding:0;
+   width: 14%;
+   gap:0;
+ }
+ .text-component-div .icon-wrapper {
+  font-size: 0.8rem;
+ }
+ .text-component-div .button-text {
+ font-size:1rem;
+ }
+ .hr-text {
+   /* width:93.4rem; */
+ }
+}
+@media only screen and (min-width: 1200px) {
+  .text-component-div {
+    width:81%;
+    margin-right: 0%;
+    /* background-color: rgb(177, 216, 203); */
+  }
+  .company-text-h2 {
+    font-size: 0.9rem;
+  }
+  .copmany-text-p {
+    font-size: 0.7rem;
+  }
+  .secSection {
+    margin-top: 2.1rem;
+  }
+ .text-component-div .FAB-button {
+   width: 10%;
+   font-size: 0.7rem;
+ }
+ .text-component-div .search-cont{
+   width: 85.6%;
+   font-size: 0.8rem;
+  }
+  .text-component-div .text-area-search {
+    width:100%;
+    font-size: 0.7rem;
+  }
+ .del-show-cont {
+ 
+   /* background-color: aqua; */
+ }
+ .text-component-div .delete-cont {
+   width: 36%;
+ }
+ .text-component-div .del-select {
+   width: 70%;
+   font-size: 0.7rem;
+ }
+ .text-component-div .del-select option {
+   font-size: 0.8rem;
+ }
+ .text-component-div .show-cont {
+   width: 38%;
+ }
+ .text-component-div .show-select {
+   font-size: 0.7rem;
+ }
+ .text-component-div .show-select option {
+   font-size: 0.8rem;
+ }
+ .text-component-div .btn-done {
+   font-size: 0.7rem;
+ }
+ .text-component-div .Edit{
+   width: 98%;
+ }
+ .text-component-div .wholeEditCont{
+   width: 100%;
+ }
+ 
+ .text-component-div .checkAndText {
+   gap: 0%;
+
+ }
+ .text-component-div .nameAndType {
+   width: 85%;
+ }
+ .text-component-div .check-edit {
+  width: 4%;
+ }
+ .text-component-div .comp-name {
+   font-size: 0.7rem;
+   width: 100%;
+ }
+ .text-component-div .comp-type {
+   font-size: 0.7rem;
+   padding: 0rem;
+ }
+ .text-component-div .edit-btn2 {
+   padding:0;
+   width: 10%;
+   gap:0;
+   /* background-color: bisque; */
+ }
+ .icon-wrapper {
+ }
+ .text-component-div .button-text {
+ font-size:1rem;
+ }
+ .hr-text {
+   /* width:93.4rem; */
+ }
+}

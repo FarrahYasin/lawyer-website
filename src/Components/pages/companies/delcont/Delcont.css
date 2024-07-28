@@ -1,0 +1,61 @@
+.del-show-cont {
+  /* background-color: blueviolet; */
+  width: 100%;
+  height: 40%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.delete-cont {
+  /* background-color:rgb(77, 255, 0); */
+  width: 36%;
+  height: 100%;
+  gap: 4%;
+  display: flex;
+}
+.del-select {
+  /* background-color: aqua; */
+  width: 70%;
+  height: 100%;
+  font-size: 0.8rem;
+  font-family: var(--text-font);
+  color: var(--text2-color);
+  border: 0.5px solid var(--text2-color);
+}
+.del-select option {
+  width: 100%;
+  height: 100%;
+  font-size: 1rem;
+}
+.show-cont {
+  width: 29%;
+  height: 100%;
+  display: flex;
+  /* height: 7vh; */
+  /* background-color: violet; */
+}
+
+.show-select {
+  /* background-color: rgb(129, 95, 129); */
+  width: 93.5%;
+  height: 100%;
+  font-size: 0.8rem;
+  font-family: var(--text-font);
+  color: var(--text2-color);
+  border: 0.5px solid var(--text2-color);
+}
+.show-select option {
+  width: 100%;
+  height: 100%;
+  font-size: 0.9rem;
+}
+.btn-done {
+  width: 25%;
+  height: 100%;
+  font-size: 0.9rem;
+  cursor: pointer;
+  background-color: white;
+  font-family: var(--text-font);
+  color: var(--primary-color);
+  border: 0.5px solid var(--primary-color);
+}

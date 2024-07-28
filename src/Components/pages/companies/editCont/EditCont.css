@@ -1,0 +1,80 @@
+.wholeEditCont {
+  display: flex;
+  font-family: var(--text-font);
+  /* background-color: rgb(77, 169, 58); */
+  /* width: 98%; */
+  /* height: 100%; */
+  /* justify-content: space-between; */
+  /* align-items: center; */
+  /* justify-content: center; */
+}
+
+.checkAndText {
+  /* background-color: wheat; */
+  width: 100%;
+  gap: 1%;
+  display: flex;
+  align-items: center;
+}
+.nameAndType {
+  /* background-color: yellowgreen; */
+  width: 82.8rem;
+  /* height: 3.3rem; */
+  /* display: flex; */
+  /* align-items: center; */
+}
+.check-edit {
+  /* background-color: black; */
+  /* width:1.5rem; */
+  /* height:7rem; */
+  cursor: pointer;
+}
+.comp-name {
+  font-size: 0.7rem;
+  /* width: 60%; */
+  /* height: 1.25rem; */
+  /* background-color: aqua; */
+}
+.comp-type {
+  font-size: 0.7rem;
+  padding: 0.4rem;
+  color: gray;
+  /* background-color: red; */
+}
+
+.edit-btn2 {
+  /* background-color: rgb(220, 113, 113); */
+  height: 2.2rem;
+  width: 8%;
+  gap: 0.3rem;
+  /* padding:1rem; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background-color: white;
+  border: 1px solid var(--text2-color);
+}
+.edit-btn2:hover{
+  background-color: var(--secondary-color);
+  border: 1px solid var(--secondary-color);
+}
+.icon-wrapper {
+  /* height: 2rem; */
+  width: 1.5rem;
+  font-size: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: brown; */
+}
+
+.button-text {
+  /* background-color: palevioletred; */
+  /* width:4rem; */
+  /* height: 1rem; */
+  font-size: 1.2rem;
+}
+.hr-text {
+  /* width:93.4rem; */
+}
