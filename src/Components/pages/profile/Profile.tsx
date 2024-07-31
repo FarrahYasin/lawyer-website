@@ -3,7 +3,8 @@ import "./Profile.css";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Box from "@mui/material/Box";
-
+import { FaCalendarDay, FaFlag, FaUserAlt, FaUserTie } from "react-icons/fa";
+import { PiGenderMaleBold } from "react-icons/pi";
 const Profile: React.FC = () => {
   const [value, setValue] = React.useState(0);
 
@@ -13,8 +14,15 @@ const Profile: React.FC = () => {
 
   return (
     <div className="profile-container">
-      <div className="dev1-t">img area</div>
-
+      <div className="dev1-t">
+        <p className="p-quraan">
+          ﴿ يَا أَيُّهَا الَّذِينَ آمَنُوا كُونُوا قَوَّامِينَ لِلَّهِ شُهَدَاءَ
+          بِالْقِسْطِ وَلَا يَجْرِمَنَّكُمْ شَنَآنُ قَوْمٍ عَلَى أَلَّا
+          تَعْدِلُوا اعْدِلُوا هُوَ أَقْرَبُ لِلتَّقْوَى وَاتَّقُوا اللَّهَ
+          إِنَّ اللَّهَ خَبِيرٌ بِمَا تَعْمَلُونَ ﴾ 
+          [المائدة: 8]
+        </p>
+      </div>
       <Tabs
         className="tabs-t"
         value={value}
@@ -26,12 +34,16 @@ const Profile: React.FC = () => {
         sx={{
           bgcolor: "background.paper",
           border: "1.5px solid #0C1033",
+
           "& .MuiTab-root": {
-            // flex: 1,
+            flex: 1,
             minHeight: "2%",
+            color: "#0C1033",
           },
           "& .MuiTabs-flexContainer": {
             gap: 0,
+            display: "flex",
+            flexDirection: "row",
           },
           // "& .MuiTabs-indicator.css-1aquho2-MuiTabs-indicator": {
           //   bgcolor: "rgba(199, 77, 197, 6)",
@@ -52,8 +64,9 @@ const Profile: React.FC = () => {
         <Tab
           sx={{
             "&.Mui-selected": {
+              flex: 1,
               bgcolor: "rgba(81, 5, 253, 1)",
-              color: "#ffffff",
+              color: "#ffff",
               fontWeight: "bold",
             },
           }}
@@ -62,8 +75,9 @@ const Profile: React.FC = () => {
         <Tab
           sx={{
             "&.Mui-selected": {
+              flex: 1,
               bgcolor: "rgba(81, 5, 253, 1)",
-              color: "#ffffff",
+              color: "#ffff",
               fontWeight: "bold",
             },
           }}
@@ -72,8 +86,9 @@ const Profile: React.FC = () => {
         <Tab
           sx={{
             "&.Mui-selected": {
+              flex: 1,
               bgcolor: "rgba(81, 5, 253, 1)",
-              color: "#ffffff",
+              color: "#ffff",
               fontWeight: "bold",
             },
           }}
@@ -82,8 +97,9 @@ const Profile: React.FC = () => {
         <Tab
           sx={{
             "&.Mui-selected": {
+              flex: 1,
               bgcolor: "rgba(81, 5, 253, 1)",
-              color: "#ffffff",
+              color: "#ffff",
               fontWeight: "bold",
             },
           }}
@@ -197,40 +213,46 @@ const Profile: React.FC = () => {
           />
           <p className="info-card-name">محمد علي كامل سليمان</p>
         </div>
+        
         <div className="info-card-content">
-          <ul className="info-card-details">
-            <li>
-              <span className="info-label">
-                <strong>الجنس</strong>
-              </span>
-              ذكر
-            </li>
-            <li>
-              <span className="info-label">
-                <strong>تاريخ الميلاد</strong>
-              </span>
-              11/9/1990
-            </li>
-            <li>
-              <span className="info-label">
-                <strong>الجنسية</strong>
-              </span>
-              أردني
-            </li>
-            <li>
-              <span className="info-label">
-                <strong>الحالة الاجتماعية</strong>
-              </span>
-              متزوج
-            </li>
-            <li>
-              <span className="info-label">
-                <strong>اسم الام</strong>
-              </span>
-              ريما
-            </li>
-          </ul>
-        </div>
+  <div className="div-infoo">
+    <PiGenderMaleBold className="icon" />
+    <div className="text-container">
+      <span className="info-label">الجنس</span>
+      <span className="label-cont">ذكر</span>
+    </div>
+  </div>
+  <div className="div-infoo">
+    <FaCalendarDay className="icon" />
+    <div className="text-container">
+      <span className="info-label">تاريخ الميلاد</span>
+      <span className="label-cont">11/9/1990</span>
+    </div>
+  </div>
+  <div className="div-infoo">
+    <FaFlag className="icon" />
+    <div className="text-container">
+      <span className="info-label">الجنسية</span>
+      <span className="label-cont">أردني</span>
+    </div>
+  </div>
+  <div className="div-infoo">
+    <FaUserTie className="icon" />
+    <div className="text-container">
+      <span className="info-label">الحالة الاجتماعية</span>
+      <span className="label-cont">متزوج</span>
+    </div>
+  </div>
+  <div className="div-infoo">
+    <FaUserAlt className="icon" />
+    <div className="text-container">
+      <span className="info-label">اسم الام</span>
+      <span className="label-cont">ريما</span>
+    </div>
+  </div>
+</div>
+
+        
       </div>
     </div>
   );
