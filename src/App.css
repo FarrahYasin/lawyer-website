@@ -20,7 +20,7 @@ body {
   /* overflow-x: hidden; */
   height: 100vh; /*was not here, it was in the body*/
   display: flex;
-  
+ 
 }
 
 ::-webkit-scrollbar {
