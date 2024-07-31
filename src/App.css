@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Marhey:wght@300..700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Marhey:wght@300..700&family=Scheherazade+New:wght@400;500;600;700&display=swap');
 
 :root {
   --primary-color: #0c1033;
@@ -7,6 +8,7 @@
   --text-color: white;
   --text2-color: #666666;
   --text-font: "Alexandria", sans-serif;
+  --text2-font:"Scheherazade New", serif;
 }
 
 body {
