@@ -1,4 +1,3 @@
-
 .profile-container {
   height: 100vh;
   width: 100%;
@@ -9,14 +8,14 @@
   column-gap: 2%;
   row-gap: 3%;
   /* row-gap: 5%; */
-  grid-template-columns: repeat(10, 1fr);
+  grid-template-columns: repeat(9, 1fr);
   /* grid-template-rows: 25% 8% 41% 8%; */
   grid-template-rows: 25% 8% 45% 8%;
   grid-template-areas:
     "dev1 dev1 dev1 dev1 dev1 dev1 dev1 dev1 dev1 dev1"
-    ". card card card tabs tabs tabs tabs tabs ."
-    ". card card card content content content content content ."
-    ". card card card btns btns btns btns btns .";
+    ". card card tabs tabs tabs tabs tabs tabs ."
+    ". card card content content content content content content ."
+    ". card card btns btns btns btns btns btns ."; 
 }
 .dev1-t {
   grid-area: dev1;
@@ -60,7 +59,7 @@
 }
 .card-t {
   grid-area: card;
-  background-color: #0c1033;
+  background-color: #0c1033; 
 }
 .card-t {
   position: relative;
@@ -82,8 +81,6 @@
 .card-t > * {
   position: relative;
   z-index: 2;
-
-
 }
 
 .tabs-t {
@@ -174,18 +171,19 @@
 }
 
 .info-card-image {
-  margin-top: -35px;
+  margin-top: -45px;
   width: 100px;
   height: 100px;
   object-fit: cover; 
-  padding-bottom:10px;
+  /* padding-bottom:13px; */
   position: relative;
   z-index: 2;
 }
 
 .info-card-name {
-  font-size: 0.8em;
+  font-size: 0.7em;
   font-weight: bold;
+  padding-bottom:13px;
 }
 
 .info-card-content {
@@ -193,7 +191,7 @@
   flex-direction: column;
   gap: 10px;
   padding-right: 20px;
-  font-size:0.8rem;
+  font-size:0.7rem;
 }
 
 .div-infoo {
@@ -208,11 +206,194 @@
 }
 
 .icon {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
 }
 
 .info-label{
   color: #817e7e;    
 }
 
+@media only screen and (max-width: 500px){
+.profile-container{
+  /* background-color: chocolate; */
+  }
+.dev1-t {
+  margin-top:17%;
+}
+.dev1-t .p-quraan{
+font-size: 11px; 
+line-height: 26px;
+width: 70%;
+}
+.card-t {
+margin-right:-50%;
+}
 
+.info-card-image {
+margin-top: -45px;
+width: 70px;
+height: 70px;
+}
+
+.info-card-name {
+font-size: 0.6em;
+padding-bottom:13px;
+}
+
+.info-card-content {
+padding-right: 20px;
+font-size:0.6rem;
+}
+
+
+.button {
+  padding: 5px 3px;
+}
+}
+@media only screen and (min-width: 500px){
+.profile-container{
+  /* background-color: rgb(97, 17, 134); */
+}
+.dev1-t {
+  margin-top:49px;
+}
+.dev1-t .p-quraan{
+  font-size: 12px; 
+  line-height: 26px;
+  width: 50%;
+}
+.card-t {
+  margin-right:-40%;
+}
+
+.info-card-image {
+  margin-top: -45px;
+  width: 70px;
+  height: 70px;
+}
+
+.info-card-name {
+  font-size: 0.6em;
+  padding-bottom:13px;
+}
+
+.div-infoo {
+  column-gap: 12px;
+}
+.text-container {
+  gap:5px;
+}
+
+.icon {
+  font-size: 1.2rem;
+}
+
+.button {
+  padding: 15px 3px;
+}
+
+}
+@media only screen and (min-width: 768px){
+  .profile-container{
+    margin-right:11%;
+    /* background-color: brown; */
+    }
+  .dev1-t {
+    margin-top:0;
+  }
+.dev1-t .p-quraan{
+  font-size: 13px; 
+  line-height: 30px;
+  width: 50%;
+}
+.card-t {
+  margin-right:0%;
+}
+
+.info-card-image {
+  margin-top: -45px;
+  width: 70px;
+  height: 70px;
+}
+
+.info-card-name {
+  font-size: 0.7em;
+  padding-bottom:13px;
+}
+
+.info-card-content {
+  padding-right: 20px;
+  font-size:0.6rem;
+}
+
+
+
+}
+@media only screen and (min-width: 992px){
+  .profile-container{
+    margin-right:11%;
+    }
+  .dev1-t {
+    margin-top:0;
+  }
+.dev1-t .p-quraan{
+  font-size: 15px; 
+  line-height: 36px;
+  width: 40%;
+}
+.card-t {
+  margin-right:0%;
+}
+
+.info-card-image {
+  margin-top: -45px;
+  width: 100px;
+  height: 100px;
+}
+
+.info-card-name {
+  font-size: 0.7em;
+  padding-bottom:13px;
+}
+
+.info-card-content {
+  padding-right: 20px;
+  font-size:0.7rem;
+}
+
+
+}
+@media only screen and (min-width: 1200px){
+  .profile-container{
+    /* background-color: aqua; */
+    }
+  .dev1-t {
+    margin-top:0;
+  }
+.dev1-t .p-quraan{
+  font-size: 15px; 
+  line-height: 36px;
+  width: 40%;
+}
+.card-t {
+  margin-right:0%;
+}
+
+.info-card-image {
+  margin-top: -45px;
+  width: 100px;
+  height: 100px;
+}
+
+.info-card-name {
+  font-size: 0.7em;
+  padding-bottom:13px;
+}
+
+.info-card-content {
+  padding-right: 20px;
+  font-size:0.7rem;
+}
+
+
+}
