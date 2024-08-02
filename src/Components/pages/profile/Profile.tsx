@@ -207,7 +207,7 @@ const Profile: React.FC = () => {
       <div className="card-t">
         <div className="info-card-image-container">
           <img
-            src="src/assets/lawyer-profile.png"
+            src="/assets/lawyer-profile.png"
             alt="Profile Image"
             className="info-card-image"
           />
