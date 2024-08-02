@@ -15,7 +15,7 @@ const Sidebar: React.FC = () => {
         <div className="img-container">
           <img
             className="sidebar-logo"
-            src="/src/assets/logo.png"
+            src="/assets/logo.png"
             alt="company_logo"
             onClick={() => navigate("/")}
           />
