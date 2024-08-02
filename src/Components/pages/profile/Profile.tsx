@@ -19,8 +19,7 @@ const Profile: React.FC = () => {
           ﴿ يَا أَيُّهَا الَّذِينَ آمَنُوا كُونُوا قَوَّامِينَ لِلَّهِ شُهَدَاءَ
           بِالْقِسْطِ وَلَا يَجْرِمَنَّكُمْ شَنَآنُ قَوْمٍ عَلَى أَلَّا
           تَعْدِلُوا اعْدِلُوا هُوَ أَقْرَبُ لِلتَّقْوَى وَاتَّقُوا اللَّهَ
-          إِنَّ اللَّهَ خَبِيرٌ بِمَا تَعْمَلُونَ ﴾ 
-          [المائدة: 8]
+          إِنَّ اللَّهَ خَبِيرٌ بِمَا تَعْمَلُونَ ﴾ [المائدة: 8]
         </p>
       </div>
       <Tabs
@@ -52,7 +51,7 @@ const Profile: React.FC = () => {
           "& .MuiTabs-scroller.MuiTabs-hideScrollbar.MuiTabs-scrollableX.css-69z67c-MuiTabs-scroller":
             {
               minHeight: "22px",
-              // bgcolor:"#0C1033"
+              // bgcolor:"#0C1033",
               margin: "0px",
             },
           "& .MuiTabs-root.tabs-t.css-6bobcw-MuiTabs-root": {
@@ -62,6 +61,7 @@ const Profile: React.FC = () => {
         }}
       >
         <Tab
+          className="tab"
           sx={{
             "&.Mui-selected": {
               flex: 1,
@@ -213,46 +213,44 @@ const Profile: React.FC = () => {
           />
           <p className="info-card-name">محمد علي كامل سليمان</p>
         </div>
-        
-        <div className="info-card-content">
-  <div className="div-infoo">
-    <PiGenderMaleBold className="icon" />
-    <div className="text-container">
-      <span className="info-label">الجنس</span>
-      <span className="label-cont">ذكر</span>
-    </div>
-  </div>
-  <div className="div-infoo">
-    <FaCalendarDay className="icon" />
-    <div className="text-container">
-      <span className="info-label">تاريخ الميلاد</span>
-      <span className="label-cont">11/9/1990</span>
-    </div>
-  </div>
-  <div className="div-infoo">
-    <FaFlag className="icon" />
-    <div className="text-container">
-      <span className="info-label">الجنسية</span>
-      <span className="label-cont">أردني</span>
-    </div>
-  </div>
-  <div className="div-infoo">
-    <FaUserTie className="icon" />
-    <div className="text-container">
-      <span className="info-label">الحالة الاجتماعية</span>
-      <span className="label-cont">متزوج</span>
-    </div>
-  </div>
-  <div className="div-infoo">
-    <FaUserAlt className="icon" />
-    <div className="text-container">
-      <span className="info-label">اسم الام</span>
-      <span className="label-cont">ريما</span>
-    </div>
-  </div>
-</div>
 
-        
+        <div className="info-card-content">
+          <div className="div-infoo">
+            <PiGenderMaleBold className="icon" />
+            <div className="text-container">
+              <span className="info-label">الجنس</span>
+              <span className="label-cont">ذكر</span>
+            </div>
+          </div>
+          <div className="div-infoo">
+            <FaCalendarDay className="icon" />
+            <div className="text-container">
+              <span className="info-label">تاريخ الميلاد</span>
+              <span className="label-cont">11/9/1990</span>
+            </div>
+          </div>
+          <div className="div-infoo">
+            <FaFlag className="icon" />
+            <div className="text-container">
+              <span className="info-label">الجنسية</span>
+              <span className="label-cont">أردني</span>
+            </div>
+          </div>
+          <div className="div-infoo">
+            <FaUserTie className="icon" />
+            <div className="text-container">
+              <span className="info-label">الحالة الاجتماعية</span>
+              <span className="label-cont">متزوج</span>
+            </div>
+          </div>
+          <div className="div-infoo">
+            <FaUserAlt className="icon" />
+            <div className="text-container">
+              <span className="info-label">اسم الام</span>
+              <span className="label-cont">ريما</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
