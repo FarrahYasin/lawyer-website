@@ -15,38 +15,38 @@
     "dev1 dev1 dev1 dev1 dev1 dev1 dev1 dev1 dev1 dev1"
     ". card card tabs tabs tabs tabs tabs tabs ."
     ". card card content content content content content content ."
-    ". card card btns btns btns btns btns btns ."; 
+    ". card card btns btns btns btns btns btns .";
 }
 .dev1-t {
   grid-area: dev1;
   position: relative;
-  background-color: #0C1033;
+  background-color: #0c1033;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.dev1-t .p-quraan{
+.dev1-t .p-quraan {
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-size: 15px; 
+  font-size: 15px;
   font-weight: 600;
   line-height: 36px;
   width: 40%;
   color: #ffffff;
-  font-family: var(--text2-font)
+  font-family: var(--text2-font);
 }
 
 .dev1-t::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('src/assets/lawyer-nav.png');
-  background-size: 89px; 
+  background-image: url("src/assets/lawyer-nav.png");
+  background-size: 89px;
   background-position: top bottom;
   filter: opacity(0.05);
   pointer-events: none;
@@ -59,20 +59,20 @@
 }
 .card-t {
   grid-area: card;
-  background-color: #0c1033; 
+  background-color: #0c1033;
 }
 .card-t {
   position: relative;
 }
 .card-t::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('src/assets/lawyer-info.png');
-  background-size: 200px; 
+  background-image: url("src/assets/lawyer-info.png");
+  background-size: 200px;
   background-position: top bottom;
   filter: opacity(0.03);
   pointer-events: none;
@@ -131,11 +131,11 @@
   border-radius: 1px;
   padding: 15px 15px;
   cursor: pointer;
-  transition: background-color 0.3s, color 0.3s; 
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .button:hover {
-  background-color: rgba(81, 5, 253, 0.1); 
+  background-color: rgba(81, 5, 253, 0.1);
 }
 
 .add-button {
@@ -160,21 +160,21 @@
 .card-t {
   display: flex;
   flex-direction: column;
-  color: #ffffff; 
+  color: #ffffff;
 }
 
 .info-card-image-container {
   display: flex;
   flex-direction: column;
   align-items: center;
- /* background-color: rgb(119, 43, 149); */
+  /* background-color: rgb(119, 43, 149); */
 }
 
 .info-card-image {
   margin-top: -45px;
   width: 100px;
   height: 100px;
-  object-fit: cover; 
+  object-fit: cover;
   /* padding-bottom:13px; */
   position: relative;
   z-index: 2;
@@ -183,7 +183,7 @@
 .info-card-name {
   font-size: 0.7em;
   font-weight: bold;
-  padding-bottom:13px;
+  padding-bottom: 13px;
 }
 
 .info-card-content {
@@ -191,7 +191,7 @@
   flex-direction: column;
   gap: 10px;
   padding-right: 20px;
-  font-size:0.7rem;
+  font-size: 0.7rem;
 }
 
 .div-infoo {
@@ -202,198 +202,354 @@
 .text-container {
   display: flex;
   flex-direction: column;
-  gap:5px;
+  gap: 5px;
 }
 
 .icon {
   font-size: 1.2rem;
 }
 
-.info-label{
-  color: #817e7e;    
+.info-label {
+  color: #817e7e;
 }
+/* .tab{
+  background-color: #000;
+}
+.tab .Mui-selected{
+  color: #000;
+  padding: 11px;
+} */
 
-@media only screen and (max-width: 500px){
-.profile-container{
-  /* background-color: chocolate; */
+@media (max-width: 500px) {
+  .profile-container {
+    /* background-color: chocolate; */
   }
-.dev1-t {
-  margin-top:17%;
+  .dev1-t {
+    margin-top: 40px;
+  }
+  .dev1-t .p-quraan {
+    font-size: 8px;
+    line-height: 16px;
+    width: 70%;
+  }
+  .tabs-t .MuiTab-root {
+    padding: 12px;
+    font-size: 0.6rem;
+  }
+  .responsive-table th {
+    font-size: 0.4rem;
+    line-height: 1rem;
+  }
+  .responsive-table td {
+    padding: 12px;
+    font-size: 0.5rem;
+    line-height: 1rem;
+  }
+  .btns-t {
+    gap: 4px;
+  }
+  .button {
+    padding: 13px 0px;
+    font-size: 0.6rem;
+  }
+  .card-t {
+    width: 140%;
+    margin-right: -40%;
+  }
+  .info-card-image {
+    margin-top: -25px;
+    width: 50px;
+    height: 50px;
+  }
+  .info-card-name {
+    font-size: 0.5em;
+  }
+  .info-card-content {
+    gap: 10px;
+    padding-right: 8px;
+    font-size: 0.5rem;
+  }
+  .div-infoo {
+    column-gap: 10px;
+  }
+  .text-container {
+    gap: 5px;
+  }
+  .icon {
+    font-size: 0.7rem;
+  }
 }
-.dev1-t .p-quraan{
-font-size: 11px; 
-line-height: 26px;
-width: 70%;
-}
-.card-t {
-margin-right:-50%;
-}
+@media (min-width: 500px) and (max-width: 767px) {
+  .profile-container {
+    /* background-color: rgb(97, 17, 134); */
+  }
+  .dev1-t {
+    margin-top: 40px;
+  }
+  .dev1-t .p-quraan {
+    font-size: 11px;
+    line-height: 19px;
+    width: 60%;
+  }
+  .tabs-t .MuiTab-root {
+    padding: 12px;
+    font-size: 0.6rem;
+  }
+  .responsive-table th {
+    font-size: 0.4rem;
+    line-height: 1rem;
+  }
+  .responsive-table td {
+    padding: 12px;
+    font-size: 0.5rem;
+    line-height: 1rem;
+  }
+  .btns-t {
+    gap: 4px;
+  }
 
-.info-card-image {
-margin-top: -45px;
-width: 70px;
-height: 70px;
+  .button {
+    padding: 13px 0px;
+    font-size: 0.6rem;
+  }
+  .card-t {
+    width: 140%;
+    margin-right: -40%;
+  }
+  .info-card-image {
+    margin-top: -25px;
+    width: 50px;
+    height: 50px;
+  }
+  .info-card-name {
+    font-size: 0.5em;
+  }
+  .info-card-content {
+    gap: 10px;
+    padding-right: 8px;
+    font-size: 0.5rem;
+  }
+  .div-infoo {
+    column-gap: 10px;
+  }
+  .text-container {
+    gap: 5px;
+  }
+  .icon {
+    font-size: 0.7rem;
+  }
 }
-
-.info-card-name {
-font-size: 0.6em;
-padding-bottom:13px;
-}
-
-.info-card-content {
-padding-right: 20px;
-font-size:0.6rem;
-}
-
-
-.button {
-  padding: 5px 3px;
-}
-}
-@media only screen and (min-width: 500px){
-.profile-container{
-  /* background-color: rgb(97, 17, 134); */
-}
-.dev1-t {
-  margin-top:49px;
-}
-.dev1-t .p-quraan{
-  font-size: 12px; 
-  line-height: 26px;
-  width: 50%;
-}
-.card-t {
-  margin-right:-40%;
-}
-
-.info-card-image {
-  margin-top: -45px;
-  width: 70px;
-  height: 70px;
-}
-
-.info-card-name {
-  font-size: 0.6em;
-  padding-bottom:13px;
-}
-
-.div-infoo {
-  column-gap: 12px;
-}
-.text-container {
-  gap:5px;
-}
-
-.icon {
-  font-size: 1.2rem;
-}
-
-.button {
-  padding: 15px 3px;
-}
-
-}
-@media only screen and (min-width: 768px){
-  .profile-container{
-    margin-right:11%;
+@media (min-width: 768px) and (max-width: 991px) {
+  .profile-container {
+    margin-right: 11%;
     /* background-color: brown; */
-    }
-  .dev1-t {
-    margin-top:0;
   }
-.dev1-t .p-quraan{
-  font-size: 13px; 
-  line-height: 30px;
-  width: 50%;
-}
-.card-t {
-  margin-right:0%;
-}
-
-.info-card-image {
-  margin-top: -45px;
-  width: 70px;
-  height: 70px;
-}
-
-.info-card-name {
-  font-size: 0.7em;
-  padding-bottom:13px;
-}
-
-.info-card-content {
-  padding-right: 20px;
-  font-size:0.6rem;
-}
-
-
-
-}
-@media only screen and (min-width: 992px){
-  .profile-container{
-    margin-right:11%;
-    }
-  .dev1-t {
-    margin-top:0;
+  .dev1-t .p-quraan {
+    font-size: 11px;
+    line-height: 25px;
+    width: 50%;
   }
-.dev1-t .p-quraan{
-  font-size: 15px; 
-  line-height: 36px;
-  width: 40%;
-}
-.card-t {
-  margin-right:0%;
-}
+  .tabs-t .MuiTab-root {
+    padding: 10px;
+    font-size: 0.7rem;
+  }
+  .responsive-table th {
+    font-size: 0.5rem;
+    line-height: 1rem;
+  }
+  .responsive-table td {
+    padding: 12px;
+    font-size: 0.6rem;
+    line-height: 1rem;
+  }
+  .btns-t {
+    gap: 8px;
+  }
 
-.info-card-image {
-  margin-top: -45px;
-  width: 100px;
-  height: 100px;
+  .button {
+    padding: 8px 0px;
+    font-size: 0.7rem;
+  }
+  .info-card-image {
+    margin-top: -25px;
+    width: 60px;
+    height: 60px;
+  }
+  .info-card-name {
+    font-size: 0.5em;
+  }
+  .info-card-content {
+    gap: 10px;
+    padding-right: 8px;
+    font-size: 0.5rem;
+  }
+  .div-infoo {
+    column-gap: 10px;
+  }
+  .text-container {
+    gap: 5px;
+  }
+  .icon {
+    font-size: 0.7rem;
+  }
 }
-
-.info-card-name {
-  font-size: 0.7em;
-  padding-bottom:13px;
+@media (min-width: 992px) and (max-width: 1199px) {
+  .profile-container {
+    margin-right: 11%;
+    /* background-color: pink; */
+  }
+  .dev1-t .p-quraan {
+    font-size: 11px;
+    line-height: 25px;
+    width: 50%;
+  }
+  .tabs-t .MuiTab-root {
+    padding: 10px;
+    font-size: 0.7rem;
+  }
+  .responsive-table th {
+    font-size: 0.5rem;
+    line-height: 1rem;
+  }
+  .responsive-table td {
+    padding: 12px;
+    font-size: 0.6rem;
+    line-height: 1rem;
+  }
+  .btns-t {
+    gap: 8px;
+  }
+  .button {
+    padding: 8px 0px;
+    font-size: 0.7rem;
+  }
+  .info-card-image {
+    margin-top: -25px;
+    width: 60px;
+    height: 60px;
+  }
+  .info-card-name {
+    font-size: 0.5em;
+  }
+  .info-card-content {
+    gap: 10px;
+    padding-right: 8px;
+    font-size: 0.5rem;
+  }
+  .div-infoo {
+    column-gap: 10px;
+  }
+  .text-container {
+    gap: 5px;
+  }
+  .icon {
+    font-size: 0.7rem;
+  }
 }
-
-.info-card-content {
-  padding-right: 20px;
-  font-size:0.7rem;
-}
-
-
-}
-@media only screen and (min-width: 1200px){
-  .profile-container{
+@media (min-width: 1200px) and (max-width: 1399px) {
+  .profile-container {
+    margin-right: 11%;
     /* background-color: aqua; */
-    }
-  .dev1-t {
-    margin-top:0;
   }
-.dev1-t .p-quraan{
-  font-size: 15px; 
-  line-height: 36px;
-  width: 40%;
+  .dev1-t .p-quraan {
+    font-size: 12px;
+    line-height: 25px;
+    width: 35%;
+  }
+  .tabs-t .MuiTab-root {
+    padding: 10px;
+    font-size: 0.7rem;
+  }
+  .responsive-table th {
+    font-size: 0.5rem;
+    line-height: 1rem;
+  }
+  .responsive-table td {
+    padding: 12px;
+    font-size: 0.6rem;
+    line-height: 1rem;
+  }
+  .btns-t {
+    gap: 8px;
+  }
+  .button {
+    padding: 8px 0px;
+    font-size: 0.7rem;
+  }
+  .info-card-image {
+    margin-top: -35px;
+    width: 80px;
+    height: 80px;
+  }
+  .info-card-name {
+    font-size: 0.7em;
+  }
+  .info-card-content {
+    gap: 10px;
+    padding-right: 8px;
+    font-size: 0.6rem;
+  }
+  .div-infoo {
+    column-gap: 10px;
+  }
+  .text-container {
+    gap: 5px;
+  }
+  .icon {
+    font-size: 0.9rem;
+  }
 }
-.card-t {
-  margin-right:0%;
-}
-
-.info-card-image {
-  margin-top: -45px;
-  width: 100px;
-  height: 100px;
-}
-
-.info-card-name {
-  font-size: 0.7em;
-  padding-bottom:13px;
-}
-
-.info-card-content {
-  padding-right: 20px;
-  font-size:0.7rem;
-}
-
+@media (min-width: 1400px) {
+  .profile-container {
+    margin-right: 11%;
+    /* background-color: rgb(36, 53, 53); */
+  }
+  .dev1-t .p-quraan {
+    font-size: 1.4rem;
+    line-height: 40px;
+    width: 40%;
+  }
+  .tabs-t .MuiTab-root {
+    padding: 15px;
+    font-size: 1.1rem;
+  }
+  .responsive-table th {
+    font-size: 0.9rem;
+    line-height: 1rem;
+  }
+  .responsive-table td {
+    padding: 12px;
+    font-size: 1rem;
+    line-height: 1.6rem;
+  }
+  .btns-t {
+    gap: 16px;
+  }
+  .button {
+    padding: 3px 3px;
+    font-size: 1.3rem;
+  }
+  .info-card-image {
+    margin-top: -55px;
+    width: 110px;
+    height: 110px;
+  }
+  .info-card-name {
+    font-size: 1rem;
+  }
+  .info-card-content {
+    gap: 15px;
+    padding-right: 15px;
+    font-size: 1rem;
+  }
+  .div-infoo {
+    column-gap: 10px;
+  }
+  .text-container {
+    gap: 5px;
+  }
+  .icon {
+    font-size: 1.1rem;
+  }
 
 }

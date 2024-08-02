@@ -171,13 +171,13 @@
 @media only screen and (min-width: 992px) {
   .sidebar-container {
     width: 20%;
-    background-color: coral;
+    /* background-color: coral; */
   }
 }
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
   .sidebar-container {
     width: 17%;
-    background-color: coral;
+    /* background-color: coral; */
   }
 }
