@@ -36,7 +36,7 @@ const Profile: React.FC = () => {
 
           "& .MuiTab-root": {
             flex: 1,
-            minHeight: "2%",
+            // minHeight: "2%",
             color: "#0C1033",
           },
           "& .MuiTabs-flexContainer": {
@@ -45,7 +45,7 @@ const Profile: React.FC = () => {
             flexDirection: "row",
           },
           // "& .MuiTabs-indicator.css-1aquho2-MuiTabs-indicator": {
-          //   bgcolor: "rgba(199, 77, 197, 6)",
+          // bgcolor: "rgba(199, 77, 197, 6)",
           // },
 
           "& .MuiTabs-scroller.MuiTabs-hideScrollbar.MuiTabs-scrollableX.css-69z67c-MuiTabs-scroller":
