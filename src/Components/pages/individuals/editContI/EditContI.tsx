@@ -1,9 +1,19 @@
 import React from "react";
-import "./EditContI.css";
 import { MdEdit } from "react-icons/md";
-import { useNavigate} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import "./EditContI.css";
 
-const EditContI: React.FC = () => {
+interface Individual {
+  id: string;
+  name: string;
+  jobTitle: string;
+}
+
+interface EditContIProps {
+  individual: Individual;
+}
+
+const EditContI: React.FC<EditContIProps> = ({ individual }) => {
   const navigate = useNavigate();
 
   return (
@@ -17,8 +27,13 @@ const EditContI: React.FC = () => {
             id="Checkbox"
           />
           <div className="nameAndType-i">
-            <h4 className="comp-name-i" onClick={() => navigate("/profile")}>محمد علي كامل سليمان</h4>
-            <p className="comp-type-i">طبيب جراحة أعصاب</p>
+            <h4
+              className="comp-name-i"
+              onClick={() => navigate(`/profile/${individual.id}`)}
+            >
+              {individual.name}
+            </h4>
+            <p className="comp-type-i">{individual.jobTitle}</p>
           </div>
           <button className="edit-btn2-i">
             <div className="icon-wrapper-i">
@@ -32,4 +47,5 @@ const EditContI: React.FC = () => {
     </>
   );
 };
+
 export default EditContI;

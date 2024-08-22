@@ -1,16 +1,60 @@
-import React, { useState } from "react";
-import "./Profile.css";
+import React, { useState, useEffect } from "react";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Box from "@mui/material/Box";
 import { FaCalendarDay, FaFlag, FaUserAlt, FaUserTie } from "react-icons/fa";
 import { PiGenderMaleBold } from "react-icons/pi";
+import { useParams } from "react-router-dom";
+import "./Profile.css";
+
+interface ProfileData {
+  id: string;
+  name: string;
+  gender: string;
+  birthdate: string;
+  nationality: string;
+  maritalStatus: string;
+  motherName: string;
+  address: string;
+  email: string;
+  phoneNumber: string;
+  faxNumber: string;
+  landlineNumber: string;
+  jobTitle: string;
+  jobDescription: string;
+  documentType: string;
+  documentNumber: string;
+  nationalId: string;
+  notes: string;
+}
+
 const Profile: React.FC = () => {
-  const [value, setValue] = React.useState(0);
+  const { userId } = useParams<{ userId: string }>(); // this to get the userId from the URL parameters
+  const [profileData, setProfileData] = useState<ProfileData | null>(null);
+  const [value, setValue] = useState<number>(0);
+
+  useEffect(() => {
+    // Fetch the data from the localStorage
+    const storedData = localStorage.getItem("individualsData");
+    if (storedData) {
+      const parsedData: ProfileData[] = JSON.parse(storedData);
+      // Find the user data based on the userId
+      const userProfile = parsedData.find((user) => user.id === userId); // Compare the  strings
+      if (userProfile) {
+        setProfileData(userProfile);
+      } else {
+        console.error("User not found");
+      }
+    }
+  }, [userId]);
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
   };
+
+  if (!profileData) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <div className="profile-container">
@@ -33,10 +77,8 @@ const Profile: React.FC = () => {
         sx={{
           bgcolor: "background.paper",
           border: "1.5px solid #0C1033",
-
           "& .MuiTab-root": {
             flex: 1,
-            // minHeight: "2%",
             color: "#0C1033",
           },
           "& .MuiTabs-flexContainer": {
@@ -44,19 +86,12 @@ const Profile: React.FC = () => {
             display: "flex",
             flexDirection: "row",
           },
-          // "& .MuiTabs-indicator.css-1aquho2-MuiTabs-indicator": {
-          // bgcolor: "rgba(199, 77, 197, 6)",
-          // },
-
-          "& .MuiTabs-scroller.MuiTabs-hideScrollbar.MuiTabs-scrollableX.css-69z67c-MuiTabs-scroller":
-            {
-              minHeight: "22px",
-              // bgcolor:"#0C1033",
-              margin: "0px",
-            },
-          "& .MuiTabs-root.tabs-t.css-6bobcw-MuiTabs-root": {
+          "& .MuiTabs-scroller": {
+            minHeight: "22px",
+            margin: "0px",
+          },
+          "& .MuiTabs-root.tabs-t": {
             minHeight: "12px",
-            // bgcolor:"rgba(81, 5, 253, 1)"
           },
         }}
       >
@@ -118,23 +153,23 @@ const Profile: React.FC = () => {
             <tbody>
               <tr>
                 <th>العنوان</th>
-                <td>عمان - شارع المدينة المنورة</td>
+                <td>{profileData.address}</td>
               </tr>
               <tr>
                 <th>البريد الالكتروني</th>
-                <td>user@example.com</td>
+                <td>{profileData.email}</td>
               </tr>
               <tr>
                 <th>رقم الهاتف</th>
-                <td>123456789+</td>
+                <td>{profileData.phoneNumber}</td>
               </tr>
               <tr>
                 <th>رقم الفاكس</th>
-                <td>987654321+</td>
+                <td>{profileData.faxNumber}</td>
               </tr>
               <tr>
                 <th>رقم الهاتف الارضي</th>
-                <td>1122334455+</td>
+                <td>{profileData.landlineNumber}</td>
               </tr>
             </tbody>
           </table>
@@ -145,11 +180,11 @@ const Profile: React.FC = () => {
             <tbody>
               <tr>
                 <th>مسمى الوظيفة</th>
-                <td>مهندس مدني</td>
+                <td>{profileData.jobTitle}</td>
               </tr>
               <tr>
                 <th>وصف المسمى</th>
-                <td>مسمى أفراد</td>
+                <td>{profileData.jobDescription}</td>
               </tr>
             </tbody>
           </table>
@@ -160,15 +195,15 @@ const Profile: React.FC = () => {
             <tbody>
               <tr>
                 <th>نوع الوثيقة</th>
-                <td>جواز سفر دائم</td>
+                <td>{profileData.documentType}</td>
               </tr>
               <tr>
                 <th>رقم الوثيقة</th>
-                <td>7777777777</td>
+                <td>{profileData.documentNumber}</td>
               </tr>
               <tr>
                 <th>الرقم الوطني</th>
-                <td>0050050005</td>
+                <td>{profileData.nationalId}</td>
               </tr>
             </tbody>
           </table>
@@ -179,19 +214,7 @@ const Profile: React.FC = () => {
             <tbody>
               <tr>
                 <th>الملاحظات</th>
-                <td>
-                  لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس
-                  المحتوى) ويُستخدم في صناعات المطابع ودور النشر. كان لوريم
-                  إيبسوم ولايزال المعيار للنص الشكلي منذ القرن الخامس عشر عندما
-                  قامت مطبعة مجهولة برص مجموعة من الأحرف بشكل عشوائي أخذتها من
-                  نص، لتكوّن كتيّب بمثابة دليل أو مرجع شكلي لهذه الأحرف. خمسة
-                  قرون من الزمن لم تقضي على هذا النص، بل انه حتى صار مستخدماً
-                  وبشكله الأصلي في الطباعة والتنضيد الإلكتروني. انتشر بشكل كبير
-                  في ستينيّات هذا القرن مع إصدار رقائق "ليتراسيت" البلاستيكية
-                  تحوي مقاطع من هذا النص، وعاد لينتشر مرة أخرى مؤخراَ مع ظهور
-                  برامج النشر الإلكتروني مثل "ألدوس بايج مايكر والتي حوت أيضاً
-                  على نسخ من نص لوريم إيبسوم.
-                </td>
+                <td>{profileData.notes}</td>
               </tr>
             </tbody>
           </table>
@@ -208,10 +231,10 @@ const Profile: React.FC = () => {
         <div className="info-card-image-container">
           <img
             src="/assets/lawyer-profile.png"
-            alt="Profile Image"
+            alt="Profile"
             className="info-card-image"
           />
-          <p className="info-card-name">محمد علي كامل سليمان</p>
+          <p className="info-card-name">{profileData.name}</p>
         </div>
 
         <div className="info-card-content">
@@ -219,35 +242,35 @@ const Profile: React.FC = () => {
             <PiGenderMaleBold className="icon" />
             <div className="text-container">
               <span className="info-label">الجنس</span>
-              <span className="label-cont">ذكر</span>
+              <span className="label-cont">{profileData.gender}</span>
             </div>
           </div>
           <div className="div-infoo">
             <FaCalendarDay className="icon" />
             <div className="text-container">
               <span className="info-label">تاريخ الميلاد</span>
-              <span className="label-cont">11/9/1990</span>
+              <span className="label-cont">{profileData.birthdate}</span>
             </div>
           </div>
           <div className="div-infoo">
             <FaFlag className="icon" />
             <div className="text-container">
               <span className="info-label">الجنسية</span>
-              <span className="label-cont">أردني</span>
-            </div>
-          </div>
-          <div className="div-infoo">
-            <FaUserTie className="icon" />
-            <div className="text-container">
-              <span className="info-label">الحالة الاجتماعية</span>
-              <span className="label-cont">متزوج</span>
+              <span className="label-cont">{profileData.nationality}</span>
             </div>
           </div>
           <div className="div-infoo">
             <FaUserAlt className="icon" />
             <div className="text-container">
+              <span className="info-label">الحالة الاجتماعية</span>
+              <span className="label-cont">{profileData.maritalStatus}</span>
+            </div>
+          </div>
+          <div className="div-infoo">
+            <FaUserTie className="icon" />
+            <div className="text-container">
               <span className="info-label">اسم الام</span>
-              <span className="label-cont">ريما</span>
+              <span className="label-cont">{profileData.motherName}</span>
             </div>
           </div>
         </div>
