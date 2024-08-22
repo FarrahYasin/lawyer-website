@@ -1,11 +1,18 @@
 import React from "react";
 import { MdAdd, MdSearch } from "react-icons/md";
+import { useNavigate } from "react-router-dom";
 import "./SearchcontI.css";
 
 const SearchcontI: React.FC = () => {
+  const navigate = useNavigate();
+
+  const handleFABClick = () => {
+    navigate("/add-record");
+  };
+
   return (
     <div className="srch-and-Btn-cont-i">
-      <button className="FAB-button-i">
+      <button className="FAB-button-i" onClick={handleFABClick}>
         سجل جديد <MdAdd />
       </button>
       <div className="search-cont-i">
@@ -19,4 +26,5 @@ const SearchcontI: React.FC = () => {
     </div>
   );
 };
+
 export default SearchcontI;
