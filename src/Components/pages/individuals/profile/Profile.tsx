@@ -26,6 +26,7 @@ interface ProfileData {
   documentNumber: string;
   nationalId: string;
   notes: string;
+  profileImage: string;
 }
 
 const Profile: React.FC = () => {
@@ -229,11 +230,20 @@ const Profile: React.FC = () => {
 
       <div className="card-t">
         <div className="info-card-image-container">
-          <img
-            src="/assets/lawyer-profile.png"
-            alt="Profile"
-            className="info-card-image"
-          />
+          {profileData.profileImage ? (
+            <img
+              src={profileData.profileImage}
+              alt="Profile"
+              className="info-card-image"
+            />
+          ) : (
+            <img
+              src="/assets/lawyer-profile.png"
+              alt="Profile"
+              className="info-card-image"
+            />
+          )}
+         
           <p className="info-card-name">{profileData.name}</p>
         </div>
 

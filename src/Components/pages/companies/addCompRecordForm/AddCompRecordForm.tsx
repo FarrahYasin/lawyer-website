@@ -28,6 +28,7 @@ interface Company {
   neighborhood: string;
   email: string;
   notes: string;
+  profileImage: string;
 }
 
 const AddCompRecordForm: React.FC = () => {
@@ -56,6 +57,7 @@ const AddCompRecordForm: React.FC = () => {
     neighborhood: " ",
     email: " ",
     notes: " ",
+    profileImage: "",
   });
 
   const handleChange = (
@@ -65,7 +67,24 @@ const AddCompRecordForm: React.FC = () => {
   ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
-
+  const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setFormData({ ...formData, profileImage: reader.result as string });
+      };
+      reader.readAsDataURL(file);
+    }
+  };
+  const handleButtonClick = () => {
+    const fileInput = document.querySelector(
+      'input[type="file"]'
+    ) as HTMLInputElement;
+    if (fileInput) {
+      fileInput.click();
+    }
+  };
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const newRecord: Company = { id: uuidv4(), ...formData }; // Assign the unique ID
@@ -85,6 +104,27 @@ const AddCompRecordForm: React.FC = () => {
       <h4 className="h4-form">إضافة منشأة جديدة</h4>
       <p>املأ الحقول أدناه بكل معلومات المنشأة</p>
       <form onSubmit={handleSubmit}>
+        <h5 className="image-form">شعار المنشأة</h5>
+        <div className="form-info">
+          <div className="image-upload-container">
+            <label className="image-preview">
+              <input
+                type="file"
+                accept="image/*"
+                onChange={handleImageChange}
+                style={{ display: "none" }}
+              />
+            </label>
+            <div className="image-upload-button">
+              <p className="p-img-profile">
+                الأبعاد الموصى بها: (120 بكسل * 120 بكسل)
+              </p>
+              <button type="button" onClick={handleButtonClick}>
+                تحميل
+              </button>
+            </div>
+          </div>
+        </div>
         <h5 className="h-form">معلومات المنشأة</h5>
         <div className="form-info">
           <label className="label-form">
