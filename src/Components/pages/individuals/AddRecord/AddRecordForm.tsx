@@ -306,8 +306,7 @@ const AddRecordForm: React.FC = () => {
           </button>
           <button
             className="close-form"
-            type="submit"
-            onChange={() => navigate("/indiv")}
+            onClick={() => navigate("/indiv")}
           >
             إلغاء
           </button>
