@@ -90,17 +90,6 @@ const AddCompRecordForm: React.FC = () => {
               onChange={handleChange}
             />
           </label>
-          {/* <label className="label-form">
-            اسم ووصف الموكل:
-            <input
-              className="input-form"
-              type="text"
-              name="name"
-              placeholder="اسم ووصف الموكل"
-              value={formData.name}
-              onChange={handleChange}
-            />
-          </label> */}
           <label className="label-form">
             اسم العلامة التجارية:
             <input
@@ -242,7 +231,7 @@ const AddCompRecordForm: React.FC = () => {
         <h5 className="h-form">معلومات السجل التجاري:</h5>
         <div className="form-work">
           <label className="label-form">
-          التسلسل:
+            التسلسل:
             <input
               className="input-form"
               type="text"
@@ -278,15 +267,16 @@ const AddCompRecordForm: React.FC = () => {
             تاريخ السجل التجاري:
             <input
               className="input-form"
-              type="text"
+              type="date"
               name="commercial_register_date"
               placeholder="تاريخ السجل التجاري"
               value={formData.commercial_register_date}
               onChange={handleChange}
             />
           </label>
+
           <label className="label-form">
-         وقائع التفويض:
+            وقائع التفويض:
             <input
               className="input-form"
               type="text"
@@ -301,23 +291,23 @@ const AddCompRecordForm: React.FC = () => {
         <div className="form-ID">
           <label className="label-form">
             اسم المفوض :
-                 <input
-                 type="text"
+            <input
+              type="text"
               className="input-form"
               name="Commissioner_name"
               value={formData.Commissioner_name}
               onChange={handleChange}
-           />
+            />
           </label>
           <label className="label-form">
             المسمى الوظيفي :
-                 <input
-                 type="text"
+            <input
+              type="text"
               className="input-form"
               name="job_title"
               value={formData.job_title}
               onChange={handleChange}
-           />
+            />
           </label>
           <label className="label-form">
             رقم هاتف المفوض:
@@ -331,7 +321,7 @@ const AddCompRecordForm: React.FC = () => {
             />
           </label>
           <label className="label-form">
-          تسلسل السجل التجاري:
+            تسلسل السجل التجاري:
             <input
               className="input-form"
               type="text"
@@ -342,7 +332,7 @@ const AddCompRecordForm: React.FC = () => {
             />
           </label>
           <label className="label-form">
-          اصدار السجل التجاري:
+            اصدار السجل التجاري:
             <input
               className="input-form"
               type="text"
@@ -352,18 +342,6 @@ const AddCompRecordForm: React.FC = () => {
               onChange={handleChange}
             />
           </label>
-          <label className="label-form">
-          تاريخ السجل التجاري:
-            <input
-              className="input-form"
-              type="date"
-              name="commercial_register_date"
-              placeholder="تاريخ السجل التجاري"
-              value={formData.commercial_register_date}
-              onChange={handleChange}
-            />
-          </label>
-       
         </div>
         <div className="form-btns">
           <button className="save-form" type="submit">
