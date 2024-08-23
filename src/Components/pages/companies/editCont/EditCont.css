@@ -15,7 +15,9 @@
   gap: 1%;
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
+
 .nameAndType {
   /* background-color: yellowgreen; */
   width: 82.8rem;
@@ -31,10 +33,15 @@
 }
 .comp-name {
   font-size: 0.7rem;
+  cursor: pointer;
   /* width: 60%; */
   /* height: 1.25rem; */
   /* background-color: aqua; */
 }
+.comp-name:hover {
+  color:var(--secondary-color);
+ }
+ 
 .comp-type {
   font-size: 0.7rem;
   padding: 0.4rem;

@@ -72,8 +72,7 @@ const AddRecordForm: React.FC = () => {
     <div className="addFormContainer">
       <h4 className="h4-form">إضافة فرد جديد</h4>
       <p>املأ الحقول أدناه بكل معلومات الموكل</p>
-      <form onSubmit={handleSubmit}> 
-        
+      <form onSubmit={handleSubmit}>
         <h5 className="h-form">المعلومات الشخصية</h5>
         <div className="form-info">
           <label className="label-form">
@@ -118,23 +117,22 @@ const AddRecordForm: React.FC = () => {
               onChange={handleChange}
             >
               <option value="">الجنس</option>
-              <option value="Male">ذكر</option>
-              <option value="Female">أنثى</option>
+              <option value="ذكر">ذكر</option>
+              <option value="انثى">أنثى</option>
             </select>
           </label>
-         
-          
+
           <label className="label-form">
             الحالة الاجتماعية:
-                 <select
+            <select
               className="input-form"
               name="maritalStatus"
               value={formData.maritalStatus}
               onChange={handleChange}
             >
               <option value="">الحالة الاجتماعية</option>
-              <option value="Single">أعزب</option>
-              <option value="Married">متزوج</option>
+              <option value="أعزب">أعزب</option>
+              <option value="متزوج">متزوج</option>
             </select>
           </label>
           <label className="label-form">
@@ -146,15 +144,15 @@ const AddRecordForm: React.FC = () => {
               onChange={handleChange}
             >
               <option value=""> الجنسية</option>
-              <option value="Jordanian">أردني</option>
-              <option value="Emirati">إماراتي</option>
-              <option value="Saudi Arabian">سعودي</option>
-              <option value="Syrian">سوري</option>
-              <option value="Egyptian">مصري</option>
-              <option value="Lebanese">لبناني</option>
-              <option value="Iraqi">عراقي</option>
-              <option value="Moroccan">مغربي</option>
-              <option value="Other">أخرى</option>
+              <option value="أردني">أردني</option>
+              <option value="إماراتي">إماراتي</option>
+              <option value="سعودي">سعودي</option>
+              <option value="سوري">سوري</option>
+              <option value="مصري">مصري</option>
+              <option value="لبناني">لبناني</option>
+              <option value="عراقي">عراقي</option>
+              <option value="مغربي">مغربي</option>
+              <option value="أخرى">أخرى</option>
             </select>
           </label>
           <label className="label-form">
@@ -256,16 +254,15 @@ const AddRecordForm: React.FC = () => {
         <div className="form-ID">
           <label className="label-form">
             نوع الوثيقة:
-           
-                 <select
+            <select
               className="input-form"
               name="documentType"
               value={formData.documentType}
               onChange={handleChange}
             >
               <option value="">نوع الوثيقة</option>
-              <option value="ID">هوية</option>
-              <option value="passport">جواز سفر</option>
+              <option value="هوية">هوية</option>
+              <option value="جواز سفر">جواز سفر</option>
             </select>
           </label>
           <label className="label-form">
@@ -309,10 +306,7 @@ const AddRecordForm: React.FC = () => {
           <button className="save-form" type="submit">
             حفظ
           </button>
-          <button
-            className="close-form"
-            onClick={() => navigate("/indiv")}
-          >
+          <button className="close-form" onClick={() => navigate("/indiv")}>
             إلغاء
           </button>
         </div>
