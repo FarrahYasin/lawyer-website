@@ -28,6 +28,10 @@ interface ProfileData {
   Commissioner_name: string;
   Commissioner_phone: string;
   job_title: string;
+  city: string;
+  neighborhood: string;
+  email: string;
+  notes: string;
 }
 
 const ProfileComp: React.FC = () => {

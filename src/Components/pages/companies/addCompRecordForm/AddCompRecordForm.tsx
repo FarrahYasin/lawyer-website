@@ -24,6 +24,10 @@ interface Company {
   Commissioner_name: string;
   Commissioner_phone: string;
   job_title: string;
+  city: string;
+  neighborhood: string;
+  email: string;
+  notes: string;
 }
 
 const AddCompRecordForm: React.FC = () => {
@@ -48,6 +52,10 @@ const AddCompRecordForm: React.FC = () => {
     Commissioner_name: " ",
     Commissioner_phone: " ",
     job_title: " ",
+    city: " ",
+    neighborhood: " ",
+    email: " ",
+    notes: " ",
   });
 
   const handleChange = (
@@ -103,13 +111,17 @@ const AddCompRecordForm: React.FC = () => {
           </label>
           <label className="label-form">
             وصف المسمى:
-            <input
+            <select
               className="input-form"
-              type="text"
               name="titleDescription"
               value={formData.titleDescription}
               onChange={handleChange}
-            />
+            >
+              <option value="" disabled></option>
+              <option value="مسمى مؤسسات"> مسمى مؤسسات</option>
+              <option value="description2">مسمى شركات </option>
+              <option value="description3">الوصف الثالث</option>
+            </select>
           </label>
 
           <label className="label-form">
@@ -159,15 +171,19 @@ const AddCompRecordForm: React.FC = () => {
           </label>
           <label className="label-form">
             صفة تسجيل المنشأة:
-            <input
+            <select
               className="input-form"
-              type="text"
               name="facility_registration_status"
-              placeholder="صفة تسجيل المنشأة"
               value={formData.facility_registration_status}
               onChange={handleChange}
-            />
+            >
+              <option value="" disabled></option>
+              <option value="status1"> شركة ذات مسؤولية محدودة</option>
+              <option value="status2">شركة ذات مسؤولية عالية </option>
+              <option value="status3">شركة ذات مسؤولية متوسطة</option>
+            </select>
           </label>
+
           <label className="label-form">
             رقم السجل التجاري:
             <input
@@ -194,13 +210,24 @@ const AddCompRecordForm: React.FC = () => {
             />
           </label>
           <label className="label-form">
-            العنوان:
+            البريد الالكتروني:
+            <input
+              className="input-form"
+              type="email"
+              name="email"
+              placeholder="رقم الهاتف"
+              value={formData.email}
+              onChange={handleChange}
+            />
+          </label>
+          <label className="label-form">
+            رقم الهاتف الارضي:
             <input
               className="input-form"
               type="text"
-              name="address"
-              placeholder="العنوان"
-              value={formData.address}
+              name="landlineNumber"
+              placeholder="رقم الهاتف الارضي"
+              value={formData.landlineNumber}
               onChange={handleChange}
             />
           </label>
@@ -216,14 +243,49 @@ const AddCompRecordForm: React.FC = () => {
               onChange={handleChange}
             />
           </label>
+
           <label className="label-form">
-            رقم الهاتف الارضي:
+            الحي:
+            <select
+              className="input-form"
+              name="neighborhood"
+              value={formData.neighborhood}
+              onChange={handleChange}
+            >
+              <option value="" disabled>
+                {" "}
+              </option>
+              <option value="الحي الاول">الحي الأول</option>
+              <option value="الحي الثاني">الحي الثاني</option>
+              <option value="الحي الثالث">الحي الثالث</option>
+            </select>
+          </label>
+
+          <label className="label-form">
+            المدينة:
+            <select
+              className="input-form"
+              name="city"
+              value={formData.city}
+              onChange={handleChange}
+            >
+              <option value="" disabled>
+                {" "}
+              </option>
+              <option value="عمان">عمان</option>
+              <option value="الزرقاء">الزرقاء</option>
+              <option value="اربد">اربد</option>
+            </select>
+          </label>
+
+          <label className="label-form">
+            العنوان:
             <input
               className="input-form"
               type="text"
-              name="landlineNumber"
-              placeholder="رقم الهاتف الارضي"
-              value={formData.landlineNumber}
+              name="address"
+              placeholder="العنوان"
+              value={formData.address}
               onChange={handleChange}
             />
           </label>
@@ -339,6 +401,20 @@ const AddCompRecordForm: React.FC = () => {
               name="Issuance_of_commercial_register"
               placeholder="اصدار السجل التجاري"
               value={formData.Issuance_of_commercial_register}
+              onChange={handleChange}
+            />
+          </label>
+        </div>
+
+        <h5 className="h-form">ملاحظات أخرى</h5>
+        <div className="form-notes">
+          <label className="label-form">
+            ملاحظات:
+            <textarea
+              className="txt-area-form"
+              name="notes"
+              placeholder="اكتب أي ملاحظات هنا..."
+              value={formData.notes}
               onChange={handleChange}
             />
           </label>
