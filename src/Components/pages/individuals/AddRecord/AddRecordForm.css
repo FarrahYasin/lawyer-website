@@ -1,0 +1,151 @@
+.addFormContainer {
+  margin-right: 18%;
+  /* background-color: rgb(85, 148, 99); */
+}
+
+.h4-form {
+  font-size: 15px;
+  font-family: var(--text-font);
+  /* background-color: rgb(148, 85, 138); */
+}
+
+.h-form {
+  font-size: 13px;
+  font-family: var(--text-font);
+}
+.h-form {
+  font-size: 13px;
+  font-family: var(--text-font);
+  margin-top: 4%;
+  position: relative;
+}
+
+.h-form::after {
+  content: "";
+  position: absolute;
+  right: 1;
+  left: 4;
+  bottom: 10%;
+  width: 80%;
+  height: 0.1px;
+  background-color: #7f7d7d;
+}
+
+.form-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  box-sizing: border-box;
+  font-size: 12px;
+  font-family: var(--text-font);
+  /* background-color: rgb(74, 223, 106); */
+}
+
+.label-form {
+  font-family: var(--text-font);
+  font-size: 12px;
+  display: flex;
+  gap: 10px;
+  flex-basis: calc(35% - 35px);
+  flex-direction: column;
+}
+
+.input-form,
+.select-form {
+  font-family: var(--text-font);
+  font-size: 12px;
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #727272;
+}
+
+.input-form:focus,
+.select-form:focus {
+  outline: none;
+}
+
+.form-contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  box-sizing: border-box;
+  font-size: 12px;
+  font-family: var(--text-font);
+}
+.form-work {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  box-sizing: border-box;
+  font-size: 12px;
+  font-family: var(--text-font);
+}
+
+.form-ID {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  box-sizing: border-box;
+  font-size: 12px;
+  font-family: var(--text-font);
+}
+.form-notes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  box-sizing: border-box;
+  font-size: 12px;
+  font-family: var(--text-font);
+}
+.form-btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 20px 0px;
+  box-sizing: border-box;
+  font-size: 12px;
+  font-family: var(--text-font);
+}
+
+.save-form,
+.close-form {
+  display: flex;
+  padding: 8px 14%;
+  border: 1px solid #727272;
+  font-size: 12px;
+  font-family: var(--text-font);
+}
+.save-form,
+.close-form {
+  background-color: rgb(255, 255, 255);
+  color: aliceblue;
+}
+.save-form {
+  background-color: var(--primary-color);
+  color: rgb(255, 255, 255);
+}
+.save-form:hover {
+    background-color: var(--secondary-color);
+    transition: var(--secondary-color) 5s ease-in; 
+  }
+  
+.close-form:hover {
+  background-color: var(--secondary-color);
+  transition: var(--secondary-color) 5s ease-in; 
+}
+.close-form {
+  color: rgb(0, 0, 0);
+}
+.txt-area-form {
+  padding: 10px 10px;
+  border: 1px solid #727272;
+  box-sizing: border-box;
+  resize: none;
+}
+
+.txt-area-form::placeholder {
+}
+
+.txt-area-form:focus {
+  outline: none;
+}
