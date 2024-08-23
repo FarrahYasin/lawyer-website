@@ -14,7 +14,7 @@ const Individuals: React.FC = () => {
   const [individuals, setIndividuals] = useState<Individual[]>([]);
 
   useEffect(() => {
-    // localStorage.clear();
+    localStorage.clear();
     // Fetch the data from localStorage
     const storedData = localStorage.getItem("individualsData");
     if (storedData) {
