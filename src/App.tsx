@@ -14,7 +14,7 @@ const App: React.FC = () => {
     <Router>
       <div className="app-container">
         <div className="sidebar">
-          {/* <Sidebar /> */}
+          <Sidebar />
           </div>
         <div className="burger-menu-container">
           <BurgerMenu />
