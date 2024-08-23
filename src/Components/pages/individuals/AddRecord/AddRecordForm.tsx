@@ -86,7 +86,7 @@ const AddRecordForm: React.FC = () => {
               onChange={handleChange}
             />
           </label>
-          {/* <label className="label-form">
+          <label className="label-form">
             اسم ووصف الموكل:
             <input
               className="input-form"
@@ -96,18 +96,8 @@ const AddRecordForm: React.FC = () => {
               value={formData.name}
               onChange={handleChange}
             />
-          </label> */}
-          <label className="label-form">
-            تاريخ الميلاد:
-            <input
-              className="input-form"
-              type="date"
-              name="birthdate"
-              placeholder="تاريخ الميلاد"
-              value={formData.birthdate}
-              onChange={handleChange}
-            />
           </label>
+
           <label className="label-form">
             الجنس:
             <select
@@ -121,20 +111,18 @@ const AddRecordForm: React.FC = () => {
               <option value="انثى">أنثى</option>
             </select>
           </label>
-
           <label className="label-form">
-            الحالة الاجتماعية:
-            <select
+            تاريخ الميلاد:
+            <input
               className="input-form"
-              name="maritalStatus"
-              value={formData.maritalStatus}
+              type="date"
+              name="birthdate"
+              placeholder="تاريخ الميلاد"
+              value={formData.birthdate}
               onChange={handleChange}
-            >
-              <option value="">الحالة الاجتماعية</option>
-              <option value="أعزب">أعزب</option>
-              <option value="متزوج">متزوج</option>
-            </select>
+            />
           </label>
+
           <label className="label-form">
             الجنسية:
             <select
@@ -153,6 +141,19 @@ const AddRecordForm: React.FC = () => {
               <option value="عراقي">عراقي</option>
               <option value="مغربي">مغربي</option>
               <option value="أخرى">أخرى</option>
+            </select>
+          </label>
+          <label className="label-form">
+            الحالة الاجتماعية:
+            <select
+              className="input-form"
+              name="maritalStatus"
+              value={formData.maritalStatus}
+              onChange={handleChange}
+            >
+              <option value="">الحالة الاجتماعية</option>
+              <option value="أعزب">أعزب</option>
+              <option value="متزوج">متزوج</option>
             </select>
           </label>
           <label className="label-form">
@@ -202,17 +203,7 @@ const AddRecordForm: React.FC = () => {
               onChange={handleChange}
             />
           </label>
-          <label className="label-form">
-            رقم الفاكس:
-            <input
-              className="input-form"
-              type="text"
-              name="faxNumber"
-              placeholder="رقم الفاكس"
-              value={formData.faxNumber}
-              onChange={handleChange}
-            />
-          </label>
+
           <label className="label-form">
             رقم الهاتف الارضي:
             <input
@@ -224,30 +215,52 @@ const AddRecordForm: React.FC = () => {
               onChange={handleChange}
             />
           </label>
+          <label className="label-form">
+            رقم الفاكس:
+            <input
+              className="input-form"
+              type="text"
+              name="faxNumber"
+              placeholder="رقم الفاكس"
+              value={formData.faxNumber}
+              onChange={handleChange}
+            />
+          </label>
         </div>
         <h5 className="h-form">المعلومات المهنية:</h5>
         <div className="form-work">
           <label className="label-form">
             مسمى الوظيفة:
-            <input
+            <select
               className="input-form"
-              type="text"
               name="jobTitle"
-              placeholder="مسمى الوظيفة"
               value={formData.jobTitle}
               onChange={handleChange}
-            />
+            >
+              <option value="مهندس" disabled>
+                {" "}
+              </option>
+              <option value="مهندس"> مهندس</option>
+              <option value="دكتور">دكتور </option>
+              <option value="محامي"> محامي</option>
+              <option value="مدرس"> مدرس</option>
+            </select>
           </label>
+
           <label className="label-form">
             وصف المسمى:
-            <input
+            <select
               className="input-form"
-              type="text"
               name="jobDescription"
-              placeholder="وصف المسمى"
               value={formData.jobDescription}
               onChange={handleChange}
-            />
+            >
+              <option value="مسمى افراد" disabled>
+                {" "}
+              </option>
+              <option value="مسمى افراد">مسمى افراد </option>
+              <option value="مسمى شركات">مسمى شركات </option>
+            </select>
           </label>
         </div>
         <h5 className="h-form">معلومات الوثيقة</h5>
