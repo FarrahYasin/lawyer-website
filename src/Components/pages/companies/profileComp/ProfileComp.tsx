@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Box from "@mui/material/Box";
-import { FaCalendarDay, FaFlag, FaUserAlt, FaUserTie } from "react-icons/fa";
-import { PiGenderMaleBold } from "react-icons/pi";
+import { FaCalendarDay, FaFlag, FaUserTie } from "react-icons/fa";
+import { MdMapsHomeWork } from "react-icons/md";
 import { useParams } from "react-router-dom";
 import "./ProfileComp.css";
 
@@ -259,7 +259,7 @@ const ProfileComp: React.FC = () => {
 
         <div className="info-card-content">
           <div className="div-infoo">
-            <PiGenderMaleBold className="icon" />
+            <MdMapsHomeWork className="icon" />
             <div className="text-container">
               <span className="info-label">العلامة التجارية</span>
               <span className="label-cont">{profileData.name}</span>
@@ -282,21 +282,21 @@ const ProfileComp: React.FC = () => {
             </div>
           </div>
           <div className="div-infoo">
-            <FaUserAlt className="icon" />
+            <MdMapsHomeWork className="icon" />
             <div className="text-container">
               <span className="info-label">جنسية المنشأة</span>
               <span className="label-cont">{profileData.nationality}</span>
             </div>
           </div>
           <div className="div-infoo">
-            <FaUserTie className="icon" />
+            <FaCalendarDay className="icon" />
             <div className="text-container">
               <span className="info-label">رقم السجل</span>
               <span className="label-cont">{profileData.record_number}</span>
             </div>
           </div>
           <div className="div-infoo">
-            <FaUserTie className="icon" />
+            <MdMapsHomeWork className="icon" />
             <div className="text-container">
               <span className="info-label">السجل التجاري</span>
               <span className="label-cont">{profileData.sequence}</span>
@@ -312,7 +312,7 @@ const ProfileComp: React.FC = () => {
             </div>
           </div>
           <div className="div-infoo">
-            <FaUserTie className="icon" />
+            <FaCalendarDay className="icon" />
             <div className="text-container">
               <span className="info-label">تاريخ السجل التجاري</span>
               <span className="label-cont">

@@ -252,9 +252,7 @@ const AddCompRecordForm: React.FC = () => {
               value={formData.neighborhood}
               onChange={handleChange}
             >
-              <option value="" disabled>
-                {" "}
-              </option>
+              <option value="" disabled></option>
               <option value="الحي الاول">الحي الأول</option>
               <option value="الحي الثاني">الحي الثاني</option>
               <option value="الحي الثالث">الحي الثالث</option>
@@ -269,9 +267,7 @@ const AddCompRecordForm: React.FC = () => {
               value={formData.city}
               onChange={handleChange}
             >
-              <option value="" disabled>
-                {" "}
-              </option>
+              <option value="" disabled></option>
               <option value="عمان">عمان</option>
               <option value="الزرقاء">الزرقاء</option>
               <option value="اربد">اربد</option>
@@ -290,7 +286,7 @@ const AddCompRecordForm: React.FC = () => {
             />
           </label>
         </div>
-        <h5 className="h-form">معلومات السجل التجاري:</h5>
+        {/* <h5 className="h-form">معلومات السجل التجاري:</h5>
         <div className="form-work">
           <label className="label-form">
             التسلسل:
@@ -363,14 +359,20 @@ const AddCompRecordForm: React.FC = () => {
           </label>
           <label className="label-form">
             المسمى الوظيفي :
-            <input
-              type="text"
+            <select
               className="input-form"
               name="job_title"
               value={formData.job_title}
               onChange={handleChange}
-            />
+            >
+              <option value=""  disabled></option>
+              <option value="مهندس">مهندس</option>
+              <option value="دكتور">دكتور</option>
+              <option value="محامي">محامي</option>
+              <option value="مدرس">مدرس</option>
+            </select>
           </label>
+
           <label className="label-form">
             رقم هاتف المفوض:
             <input
@@ -404,7 +406,7 @@ const AddCompRecordForm: React.FC = () => {
               onChange={handleChange}
             />
           </label>
-        </div>
+        </div> */}
 
         <h5 className="h-form">ملاحظات أخرى</h5>
         <div className="form-notes">
