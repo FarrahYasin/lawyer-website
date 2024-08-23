@@ -8,7 +8,7 @@ import Individuals from "./Components/pages/individuals/Individuals";
 import Profile from "./Components/pages/individuals/profile/Profile";
 import BurgerMenu from "./Components/sidebar/burgerMenu/BurgerMenu";
 import AddRecordForm from "./Components/pages/individuals/AddRecord/AddRecordForm"; 
-import ProfileComp from "./Components/pages/companies/profileComp/ProfileCopm";
+import ProfileComp from "./Components/pages/companies/profileComp/ProfileComp";
 import AddCompRecordForm from "./Components/pages/companies/addCompRecordForm/AddCompRecordForm";
 
 const App: React.FC = () => {
