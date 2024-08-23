@@ -1,0 +1,618 @@
+.profile-container {
+  /* height: 100%; */
+  width: 100%;
+  font-family: var(--text-font);
+  /* background-color: rgb(103, 213, 103); */
+  display: grid;
+  column-gap: 2%;
+  row-gap: 2%;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: 1.8fr 0.7fr 4fr 0.7fr;
+  grid-template-areas:
+    "dev1 dev1 dev1 dev1 dev1 dev1 dev1 dev1 dev1 dev1"
+    ". card card tabs tabs tabs tabs tabs tabs ."
+    ". card card content content content content content content ."
+    ". card card btns btns btns btns btns btns .";
+  margin-bottom: 2%;
+}
+.dev1-t {
+  grid-area: dev1;
+  position: relative;
+  background-color: #0c1033;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dev1-t .p-quraan {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 36px;
+  width: 40%;
+  color: #ffffff;
+  font-family: var(--text2-font);
+}
+.dev1-t::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("/assets/lawyer-nav.png");
+  background-size: 89px;
+  background-position: top bottom;
+  filter: opacity(0.05);
+  pointer-events: none;
+}
+.dev1-t > * {
+  position: relative;
+  z-index: 2;
+}
+.card-t {
+  grid-area: card;
+  background-color: #0c1033;
+}
+.card-t {
+  position: relative;
+}
+.card-t::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("/assets/lawyer-info.png");
+  background-size: 200px;
+  background-position: top bottom;
+  filter: opacity(0.03);
+  pointer-events: none;
+}
+.card-t > * {
+  position: relative;
+  z-index: 2;
+}
+.tabs-t {
+  grid-area: tabs;
+}
+
+.tabs-t .css-1q9ne6q-MuiButtonBase-root-MuiTab-root {
+  padding: 24px 24px;
+}
+.content-t {
+  grid-area: content;
+  overflow: auto;
+}
+.responsive-table {
+  width: 100%;
+  height: 100%;
+  font-size: 0.7rem;
+  border-collapse: collapse;
+}
+.responsive-table th {
+  width: 20%;
+  padding: 12px;
+  font-size: 0.6rem;
+  color: aliceblue;
+  background-color: #0c1033;
+  text-align: right;
+}
+.responsive-table td {
+  padding: 12px;
+  line-height: 1rem;
+}
+.btns-t {
+  grid-area: btns;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  min-height: 48px;
+  box-sizing: border-box;
+}
+.button {
+  flex-grow: 2;
+  color: #0c1033;
+  background-color: #ffffff;
+  font-weight: bold;
+  border: 1px solid #0c1033;
+  border-radius: 1px;
+  padding: 15px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+.button:hover {
+  background-color: rgba(81, 5, 253, 0.1);
+}
+.add-button {
+  background-color: #0c1033;
+  color: #ffffff;
+}
+.add-button:hover {
+  background-color: #0c1033;
+  color: rgba(81, 2, 253, 1);
+}
+.delete-button {
+  color: rgba(198, 57, 57, 1);
+  border-color: rgba(198, 57, 57, 1);
+}
+.delete-button:hover {
+  background-color: rgba(81, 5, 253, 0.1);
+}
+.card-t {
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
+  box-sizing: border-box;
+}
+.info-card-image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.info-card-image {
+  margin-top: -45px;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  position: relative;
+  z-index: 2;
+}
+.info-card-name {
+  font-size: 0.7em;
+  font-weight: bold;
+  padding-bottom: 13px;
+}
+.info-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-right: 20px;
+  font-size: 0.7rem;
+  max-height: 300px;
+  overflow-y: auto;
+}
+.div-infoo {
+  display: flex;
+  align-items: center;
+  column-gap: 12px;
+}
+.text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.icon {
+  font-size: 1.2rem;
+}
+.info-label {
+  color: #817e7e;
+}
+@media (max-width: 500px) {
+  .profile-container {
+    /* background-color: chocolate; */
+    margin-bottom: 2%;
+  }
+  .dev1-t {
+    margin-top: 51.5px;
+  }
+  .dev1-t .p-quraan {
+    font-size: 8px;
+    line-height: 16px;
+    width: 70%;
+  }
+  .tabs-t .MuiTab-root {
+    font-size: 0.6rem;
+  }
+  .tabs-t .css-1q9ne6q-MuiButtonBase-root-MuiTab-root {
+    padding: 0px 2px;
+  }
+  .responsive-table th {
+    font-size: 0.4rem;
+    line-height: 1rem;
+  }
+  .responsive-table td {
+    padding: 12px;
+    font-size: 0.5rem;
+    line-height: 1rem;
+  }
+  .btns-t {
+    gap: 3px;
+  }
+  .button {
+    padding: 6px 6px;
+    font-size: 0.6rem;
+  }
+  .card-t {
+    width: 140%;
+    margin-right: -40%;
+  }
+  .info-card-image {
+    margin-top: -25px;
+    width: 50px;
+    height: 50px;
+  }
+  .info-card-name {
+    font-size: 0.5em;
+  }
+  .info-card-content {
+    gap: 10px;
+    padding-right: 8px;
+    font-size: 0.5rem;
+  }
+  .div-infoo {
+    column-gap: 10px;
+  }
+  .text-container {
+    gap: 5px;
+  }
+  .icon {
+    font-size: 0.7rem;
+  }
+}
+@media (min-width: 500px) and (max-width: 767px) {
+  .profile-container {
+    /* background-color: rgb(97, 17, 134); */
+  }
+  .dev1-t {
+    margin-top: 49px;
+  }
+  .dev1-t .p-quraan {
+    font-size: 11px;
+    line-height: 19px;
+    width: 60%;
+  }
+  .tabs-t .MuiTab-root {
+    padding: 12px;
+    font-size: 0.6rem;
+  }
+  .tabs-t .css-1q9ne6q-MuiButtonBase-root-MuiTab-root {
+    padding: 21px 0px;
+  }
+  .responsive-table th {
+    font-size: 0.4rem;
+    line-height: 1rem;
+  }
+  .responsive-table td {
+    padding: 12px;
+    font-size: 0.5rem;
+    line-height: 1rem;
+  }
+  .btns-t {
+    gap: 4px;
+  }
+  .button {
+    padding: 13px 0px;
+    font-size: 0.6rem;
+  }
+  .card-t {
+    width: 140%;
+    margin-right: -40%;
+  }
+  .info-card-image {
+    margin-top: -25px;
+    width: 50px;
+    height: 50px;
+  }
+  .info-card-name {
+    font-size: 0.5em;
+  }
+  .info-card-content {
+    gap: 10px;
+    padding-right: 8px;
+    font-size: 0.5rem;
+  }
+  .div-infoo {
+    column-gap: 10px;
+  }
+  .text-container {
+    gap: 5px;
+  }
+  .icon {
+    font-size: 0.7rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .profile-container {
+    margin-right: 11%;
+    /* background-color: brown; */
+  }
+  .dev1-t .p-quraan {
+    font-size: 9px;
+    line-height: 25px;
+    width: 40%;
+  }
+  .tabs-t {
+    grid-area: tabs;
+  }
+  .tabs-t .MuiTab-root {
+    /* background: #2c8040a8; */
+    font-size: 11px;
+  }
+  .tabs-t .css-1q9ne6q-MuiButtonBase-root-MuiTab-root.Mui-selected {
+    /* background-color: brown; */
+  }
+  .tabs-t .css-1q9ne6q-MuiButtonBase-root-MuiTab-root {
+    padding: 21px 0px;
+  }
+
+  .responsive-table {
+    width: 100%;
+    height: 100%;
+    font-size: 0.6rem;
+  }
+  .responsive-table th {
+    width: 20%;
+    padding: 12px;
+    font-size: 0.5rem;
+  }
+  .responsive-table td {
+    padding: 12px;
+    line-height: 1rem;
+  }
+  .btns-t {
+    gap: 8px;
+  }
+
+  .button {
+    padding: 13px 13px;
+  }
+
+  .info-card-image {
+    margin-top: -25px;
+    width: 60px;
+    height: 60px;
+  }
+  .info-card-name {
+    font-size: 8px;
+    padding-bottom: 13px;
+  }
+  .info-card-content {
+    gap: 10px;
+    padding-right: 20px;
+    font-size: 11px;
+  }
+  .div-infoo {
+    column-gap: 12px;
+  }
+  .text-container {
+    gap: 5px;
+  }
+  .icon {
+    font-size: 15px;
+  }
+  .info-label {
+    font-size: 11px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .profile-container {
+    margin-right: 11%;
+    /* background-color: pink; */
+  }
+  .dev1-t .p-quraan {
+    font-size: 11px;
+    line-height: 25px;
+    width: 50%;
+  }
+  .tabs-t .MuiTab-root {
+    padding: 1px;
+    font-size: 0.7rem;
+  }
+  .tabs-t .css-1q9ne6q-MuiButtonBase-root-MuiTab-root {
+    padding: 23px 24px;
+  }
+  .responsive-table th {
+    font-size: 0.5rem;
+    line-height: 1rem;
+  }
+  .responsive-table td {
+    padding: 12px;
+    font-size: 0.6rem;
+    line-height: 1rem;
+  }
+  .btns-t {
+    gap: 8px;
+  }
+  .button {
+    padding: 8px 0px;
+    font-size: 0.7rem;
+  }
+  .info-card-image {
+    margin-top: -25px;
+    width: 60px;
+    height: 60px;
+  }
+  .info-card-name {
+    font-size: 0.5em;
+  }
+  .info-card-content {
+    gap: 10px;
+    padding-right: 8px;
+    font-size: 0.5rem;
+  }
+  .div-infoo {
+    column-gap: 10px;
+  }
+  .text-container {
+    gap: 5px;
+  }
+  .icon {
+    font-size: 0.7rem;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1399px) {
+  .profile-container {
+    margin-right: 11%;
+    /* background-color: aqua; */
+  }
+  .dev1-t .p-quraan {
+    font-size: 12px;
+    line-height: 25px;
+    width: 35%;
+  }
+  .tabs-t .MuiTab-root {
+    padding: 10px;
+    font-size: 0.7rem;
+  }
+  .tabs-t .css-1q9ne6q-MuiButtonBase-root-MuiTab-root {
+    padding: 15px 0px;
+  }
+  .responsive-table th {
+    font-size: 0.5rem;
+    line-height: 1rem;
+  }
+  .responsive-table td {
+    padding: 12px;
+    font-size: 0.6rem;
+    line-height: 1rem;
+  }
+  .btns-t {
+    gap: 8px;
+  }
+  .button {
+    padding: 8px 0px;
+    font-size: 0.7rem;
+  }
+  .info-card-image {
+    margin-top: -35px;
+    width: 80px;
+    height: 80px;
+  }
+  .info-card-name {
+    font-size: 0.7em;
+  }
+  .info-card-content {
+    gap: 10px;
+    padding-right: 8px;
+    font-size: 0.6rem;
+  }
+  .div-infoo {
+    column-gap: 10px;
+  }
+  .text-container {
+    gap: 5px;
+  }
+  .icon {
+    font-size: 0.9rem;
+  }
+}
+@media (min-width: 1400px) {
+  .profile-container {
+    margin-right: 11%;
+    /* background-color: rgb(36, 53, 53); */
+  }
+  .dev1-t .p-quraan {
+    font-size: 12px;
+    line-height: 25px;
+    width: 35%;
+  }
+  .tabs-t .css-1q9ne6q-MuiButtonBase-root-MuiTab-root {
+    padding: 28px 0px;
+  }
+  .responsive-table th {
+    font-size: 0.5rem;
+    line-height: 1rem;
+  }
+  .responsive-table td {
+    padding: 12px;
+    font-size: 0.6rem;
+    line-height: 1rem;
+  }
+  .btns-t {
+    gap: 8px;
+  }
+  .button {
+    padding: 8px 0px;
+  }
+  .info-card-image {
+    margin-top: -35px;
+    width: 80px;
+    height: 80px;
+  }
+  .info-card-name {
+    font-size: 0.7em;
+  }
+  .info-card-content {
+    gap: 10px;
+    padding-right: 8px;
+    font-size: 0.6rem;
+  }
+  .div-infoo {
+    column-gap: 10px;
+  }
+  .text-container {
+    gap: 5px;
+  }
+  .icon {
+    font-size: 0.9rem;
+  }
+}
+@media (max-height: 600px) {
+  .profile-container {
+    /* background-color: lightblue; */
+  }
+  .tabs-t .css-1q9ne6q-MuiButtonBase-root-MuiTab-root {
+    padding: 8px 0px;
+  }
+}
+@media (min-height: 601px) and (max-height: 800px) {
+  .profile-container {
+    /* background-color: rgb(13, 13, 13); */
+  }
+  .tabs-t .css-1q9ne6q-MuiButtonBase-root-MuiTab-root {
+    padding: 26px 0px;
+  }
+}
+@media (min-height: 801px) {
+  .profile-container {
+    /* background-color: lightcoral; */
+  }
+  .tabs-t .css-1q9ne6q-MuiButtonBase-root-MuiTab-root {
+    padding: 30px 0px;
+  }
+}
+@media (min-height: 900px) {
+  .profile-container {
+    /* background-color: rgb(99, 44, 44); */
+  }
+  .tabs-t .css-1q9ne6q-MuiButtonBase-root-MuiTab-root {
+    padding: 37px 0px;
+  }
+}
+@media (min-height: 1000px) {
+  .profile-container {
+    /* background-color: rgb(186, 169, 169); */
+  }
+  .tabs-t .css-1q9ne6q-MuiButtonBase-root-MuiTab-root {
+    padding: 44px 0px;
+  }
+}
+@media (min-height: 1024px) {
+  .profile-container {
+    /* background-color: rgb(81, 70, 70); */
+  }
+  .tabs-t .css-1q9ne6q-MuiButtonBase-root-MuiTab-root {
+    padding: 37px 0px;
+  }
+}
+@media (min-height: 1100px) {
+  .profile-container {
+    /* background-color: rgb(148, 148, 95); */
+  }
+  .tabs-t .css-1q9ne6q-MuiButtonBase-root-MuiTab-root {
+    padding: 45px 0px;
+  }
+}
+@media (min-height: 1200px) {
+  .profile-container {
+    /* background-color: rgb(100, 100, 47); */
+  }
+  .tabs-t .css-1q9ne6q-MuiButtonBase-root-MuiTab-root {
+    padding: 52px 0px;
+  }
+}

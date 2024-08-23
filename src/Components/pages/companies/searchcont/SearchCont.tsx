@@ -1,11 +1,16 @@
 import React from "react";
 import { MdAdd, MdSearch } from "react-icons/md";
+import { useNavigate } from "react-router-dom";
 import "./SearchCont.css";
 
 const SearchCont: React.FC = () => {
+  const navigate = useNavigate();
+  const handleFABClick = () => {
+    navigate("/add-comp-record");
+  };
   return (
     <div className="srch-and-Btn-cont">
-      <button className="FAB-button">
+      <button className="FAB-button" onClick={handleFABClick}>
         سجل جديد <MdAdd />
       </button>
       <div className="search-cont">
