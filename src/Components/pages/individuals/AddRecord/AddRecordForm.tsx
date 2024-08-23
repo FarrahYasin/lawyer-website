@@ -126,14 +126,16 @@ const AddRecordForm: React.FC = () => {
           
           <label className="label-form">
             الحالة الاجتماعية:
-            <input
+                 <select
               className="input-form"
-              type="text"
               name="maritalStatus"
-              placeholder="الحالة الاجتماعية"
               value={formData.maritalStatus}
               onChange={handleChange}
-            />
+            >
+              <option value="">الحالة الاجتماعية</option>
+              <option value="Single">أعزب</option>
+              <option value="Married">متزوج</option>
+            </select>
           </label>
           <label className="label-form">
             الجنسية:
@@ -254,22 +256,25 @@ const AddRecordForm: React.FC = () => {
         <div className="form-ID">
           <label className="label-form">
             نوع الوثيقة:
-            <input
+           
+                 <select
               className="input-form"
-              type="text"
               name="documentType"
-              placeholder="نوع الوثيقة"
               value={formData.documentType}
               onChange={handleChange}
-            />
+            >
+              <option value="">نوع الوثيقة</option>
+              <option value="ID">هوية</option>
+              <option value="passport">جواز سفر</option>
+            </select>
           </label>
           <label className="label-form">
-            نوع الوثيقة:
+            رقم الوثيقة:
             <input
               className="input-form"
               type="text"
               name="documentNumber"
-              placeholder="نوع الوثيقة"
+              placeholder="رقم الوثيقة"
               value={formData.documentNumber}
               onChange={handleChange}
             />
