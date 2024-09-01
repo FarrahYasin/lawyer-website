@@ -14,8 +14,8 @@
   padding-top: 2rem;
   background: radial-gradient(
     circle at bottom right,
-    rgba(199, 70, 197, 0.5) -30%,
-    #0c1033 30%
+    #FFBF0080 -30%,
+    #0F0F0F 30%
   );
   /* gap: 2.2rem; */
   /* padding: 1.4rem 0rem; */
@@ -101,10 +101,10 @@
   /* gap: 0.5rem; */
 }
 .comp-button.active {
-  background-color: #5105fd;
+  background-color: #0F0F0F;
 }
 .indi-button.active {
-  background-color: #5105fd;
+  background-color: #0F0F0F;
 }
 .comp-span {
   font-weight: 500;
@@ -126,8 +126,8 @@
   align-items: center;
   border: none;
   cursor: pointer;
-  color: #ffffff;
-  background-color: #5105fd;
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
   /* width: 10.7rem;
   height: 10%; */
   /* gap: 0.5rem; */

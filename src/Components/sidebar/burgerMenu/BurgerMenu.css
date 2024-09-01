@@ -25,8 +25,9 @@
   transition: background 0.3s ease;
 }
 .nav-item.active {
-  background-color: #5105fd;
+  background-color:var(--secondary-color);
 }
 .nav-item.active {
-  background-color: #5105fd;
+  color: var(--primary-color);
+  background-color:var(--secondary-color);
 }
