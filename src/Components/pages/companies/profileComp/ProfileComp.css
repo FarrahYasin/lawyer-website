@@ -18,7 +18,7 @@
 .dev1-t {
   grid-area: dev1;
   position: relative;
-  background-color: #0c1033;
+  background-color: var(--primary-color);;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -52,9 +52,12 @@
   position: relative;
   z-index: 2;
 }
+.css-1aquho2-MuiTabs-indicator {
+  background-color:var(--primary-color);
+}
 .card-t {
   grid-area: card;
-  background-color: #0c1033;
+  background-color: var(--primary-color);;
 }
 .card-t {
   position: relative;
@@ -98,7 +101,7 @@
   padding: 12px;
   font-size: 0.6rem;
   color: aliceblue;
-  background-color: #0c1033;
+  background-color: var(--primary-color);;
   text-align: right;
 }
 .responsive-table td {
@@ -116,32 +119,33 @@
 }
 .button {
   flex-grow: 2;
-  color: #0c1033;
+  color: var(--primary-color);;
   background-color: #ffffff;
   font-weight: bold;
-  border: 1px solid #0c1033;
+  border: 1px solid var(--primary-color);;
   border-radius: 1px;
   padding: 15px 15px;
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
 }
 .button:hover {
-  background-color: rgba(81, 5, 253, 0.1);
+  /* background-color: var(--primary-color); */
 }
 .add-button {
-  background-color: #0c1033;
+  background-color: var(--primary-color);;
   color: #ffffff;
 }
 .add-button:hover {
-  background-color: #0c1033;
-  color: rgba(81, 2, 253, 1);
+  /* background-color: var(--primary-color);; */
+  color: var(--secondary-color);
 }
 .delete-button {
   color: rgba(198, 57, 57, 1);
   border-color: rgba(198, 57, 57, 1);
+
 }
 .delete-button:hover {
-  background-color: rgba(81, 5, 253, 0.1);
+  background-color: var(--text2-font)
 }
 .card-t {
   display: flex;

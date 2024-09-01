@@ -101,7 +101,7 @@ const Profile: React.FC = () => {
           sx={{
             "&.Mui-selected": {
               flex: 1,
-              bgcolor: "rgba(81, 5, 253, 1)",
+              bgcolor: "  var(--secondary-color)",
               color: "#ffff",
               fontWeight: "bold",
             },
@@ -112,7 +112,7 @@ const Profile: React.FC = () => {
           sx={{
             "&.Mui-selected": {
               flex: 1,
-              bgcolor: "rgba(81, 5, 253, 1)",
+              bgcolor: " var(--secondary-color)",
               color: "#ffff",
               fontWeight: "bold",
             },
@@ -123,7 +123,7 @@ const Profile: React.FC = () => {
           sx={{
             "&.Mui-selected": {
               flex: 1,
-              bgcolor: "rgba(81, 5, 253, 1)",
+              bgcolor: " var(--secondary-color)",
               color: "#ffff",
               fontWeight: "bold",
             },
@@ -134,7 +134,7 @@ const Profile: React.FC = () => {
           sx={{
             "&.Mui-selected": {
               flex: 1,
-              bgcolor: "rgba(81, 5, 253, 1)",
+              bgcolor: " var(--secondary-color)",
               color: "#ffff",
               fontWeight: "bold",
             },
@@ -145,7 +145,7 @@ const Profile: React.FC = () => {
 
       <Box
         style={{
-          border: "2px solid rgba(217, 217, 217, 1)",
+          border: "2px solid var(--primary-color);",
         }}
         className="content-t"
       >

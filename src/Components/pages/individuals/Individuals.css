@@ -322,7 +322,7 @@
   }
   .text-component-div-i .check-edit-i {
    width: 5%;
-   background-color: aqua;
+   /* background-color: aqua; */
   }
   .text-component-div-i .comp-name-i {
     font-size: 0.7rem;
@@ -413,7 +413,7 @@
   }
   .text-component-div-i .check-edit-i {
    width: 4%;
-   background-color: aqua;
+   /* background-color: aqua; */
   }
   .text-component-div-i .comp-name-i {
     font-size: 0.7rem;

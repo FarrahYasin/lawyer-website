@@ -107,7 +107,7 @@ const ProfileComp: React.FC = () => {
           sx={{
             "&.Mui-selected": {
               flex: 1,
-              bgcolor: "rgba(81, 5, 253, 1)",
+              bgcolor: "var(--secondary-color)",
               color: "#ffff",
               fontWeight: "bold",
             },
@@ -118,7 +118,7 @@ const ProfileComp: React.FC = () => {
           sx={{
             "&.Mui-selected": {
               flex: 1,
-              bgcolor: "rgba(81, 5, 253, 1)",
+              bgcolor: "var(--secondary-color)",
               color: "#ffff",
               fontWeight: "bold",
             },
@@ -129,7 +129,7 @@ const ProfileComp: React.FC = () => {
           sx={{
             "&.Mui-selected": {
               flex: 1,
-              bgcolor: "rgba(81, 5, 253, 1)",
+              bgcolor: "var(--secondary-color)",
               color: "#ffff",
               fontWeight: "bold",
             },
