@@ -32,7 +32,7 @@
   font-weight: 600;
   line-height: 36px;
   width: 40%;
-  color: #ffffff;
+  color: white;
   font-family: var(--text2-font);
 }
 .dev1-t::before {
